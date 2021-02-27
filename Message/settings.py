@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
+    'app.apps.AppConfig',
+    #-- package
     'active_link',
+    'django_admin_generator',
 ]
 
 MIDDLEWARE = [

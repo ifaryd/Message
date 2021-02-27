@@ -8,6 +8,8 @@ def accueil(request):
 def index(request, lang):
     lang = lang
     currentpage = ""
+    
+    # actus = models.Actualite.objects.all()[:3]
     return render(request, 'index.html', locals())
 
 def contact(request, lang):
