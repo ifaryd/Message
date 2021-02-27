@@ -6,10 +6,10 @@ def accueil(request):
     return redirect('/fr/')
 
 def index(request, lang):
-    #predication = models.Predication.objects.language('fr')[:1].get()
-    #verset = models.Verset.objects.language(predication.get_current_language())[:1].get()
     lang = lang
     currentpage = ""
+    
+    # actus = models.Actualite.objects.all()[:3]
     return render(request, 'index.html', locals())
 
 
