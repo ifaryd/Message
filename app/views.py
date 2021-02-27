@@ -31,5 +31,6 @@ def predications_detail(request, lang, predid):
     lang = lang
     currentpage = "predication/"+ str(predid)
     
-    predications = models.Predication.objects.filter(id_langue__initial = lang)
+    predications = models.Predication.objects.get(pk =int(predid))
+    versets =  models.Verset.objects.filter(id_pred = predications)
     return render(request, 'predications-details.html', locals())

@@ -64,7 +64,7 @@
                     <ul class="languages-list list-inline">
                         
                         {% for item in langs %}
-                        <li><a href="{% url 'index' item.initial %}{{currentpage}}"><img src="/static/images/flags/{{ item.initial }}.png"  alt="Français" /></a></li>
+                        <li><a href="{% url 'index' item.initial %}"><img src="/static/images/flags/{{ item.initial }}.png"  alt="Français" /></a></li>
                         {% endfor %}
                             
                         
@@ -103,7 +103,7 @@ la visitation d'un Ange qui le commissionne pour un Message destiné au Salut de
         <li>
             <a href="#">Prédications</a>
             <ul class="dropdown">
-                <li><a href="ecrites">Prédications écrites</a></li>
+                <li><a href="{% url 'predications' lang %}">Prédications écrites</a></li>
                 <li><a href="videos">Prédications vidéos</a></li>
                 <li><a href="audio">Prédications audio</a></li>
             </ul>

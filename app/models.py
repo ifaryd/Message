@@ -32,7 +32,7 @@ class Verset(models.Model):
     numero = models.IntegerField(blank=True, null=True)
     contenu = models.TextField(blank=True, null=True)  # This field type is a guess.
     id_langue = models.ForeignKey('Langue', db_column='id_langue', on_delete=models.CASCADE)
-    id_pred = models.ForeignKey('Predication', db_column='id_pred', on_delete=models.CASCADE)
+    id_pred = models.ForeignKey('Predication', db_column='id_pred', on_delete=models.CASCADE, related_name="pred_verset")
     #id_parab = models.ForeignKey('Parabole', on_delete=models.CASCADE)
     def __str__(self):
         return self.contenu
