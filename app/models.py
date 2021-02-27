@@ -1,5 +1,17 @@
 from django.db import models
 
+class Actualite(models.Model):
+    field_id = models.AutoField(db_column='_id', primary_key=True)  # Field renamed because it started with '_'.
+    date = models.TextField()
+    heure = models.TextField()
+    details = models.TextField()
+    def __str__(self):
+        return self.date
+    class Meta:
+        managed = False
+        db_table = 'actualite'
+
+
 class Langue(models.Model):
     field_id = models.AutoField(db_column='_id', primary_key=True)  # Field renamed because it started with '_'.
     initial = models.TextField()
