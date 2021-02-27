@@ -6,3 +6,5 @@ admin.site.register(Actualite)
 admin.site.register(Predication)
 admin.site.register(Langue)
 admin.site.register(Verset)
+
+
