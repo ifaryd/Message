@@ -39,7 +39,7 @@ class PredicationAdmin(admin.ModelAdmin):
     )
     ordering = ['field_id']
     list_filter = ('id_langue',)
-    list_display_links = ['nom_pred']
+    list_display_links = ['nom_pred', 'titre',]
     
 
 
@@ -50,6 +50,7 @@ class VersetAdmin(admin.ModelAdmin):
     ordering = ['field_id']
     list_per_page = 100
     search_fields = ['numero','id_langue',]
+    list_display_links = ['numero', 'id_pred',]
 
 
 

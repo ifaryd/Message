@@ -41,13 +41,13 @@
     <script>
         
 
-        // (function(d, s, id) {
-        //   var js, fjs = d.getElementsByTagName(s)[0];
-        //   if (d.getElementById(id)) return;
-        //   js = d.createElement(s); js.id = id;
-        //   js.src = "//connect.facebook.net/"+locale+"/sdk.js#xfbml=1&version=v2.6";
-        //   fjs.parentNode.insertBefore(js, fjs);
-        // }(document, 'script', 'facebook-jssdk'));
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/"+locale+"/sdk.js#xfbml=1&version=v2.6";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
         
 
@@ -57,21 +57,18 @@
             <div class="header-top clearfix">
                 <div class="logo-wrapper grid_2">
                     <a href="https://www.philippekacou.org/fr" class="logo">
-                        <img src="{% static 'img/logo-pkacou.png' %}"  alt="Logo" title="Aller à la page d'accueil" class="img_responsive" />
+                        <img src="{% static 'images/logo-pkacou.png' %}"  alt="Logo" title="Aller à la page d'accueil" class="img_responsive" />
                     </a>
                 </div>
                 <div class="grid_7 text-center alpha">
                     <ul class="languages-list list-inline">
                         
                         {% for item in langs %}
-                        <li><a href="{% url 'index' item.initial %}"><img src="/static/images/flags/{{ item.initial }}.png"  alt="Français" /></a></li>
+                        <li><a href="{% url 'index' item.initial %}"><img src="/static/images/flags/{{ item.initial }}.png"  alt="{{ item.initial }}" /></a></li>
                         {% endfor %}
                             
                         
-                        <!-- <li><a href="https://www.philippekacou.org/en"><img src="https://www.philippekacou.org/assets/front/images/flags/UK_flat.png"  alt="Anglais" /></a></li>
-                        <li><a href="https://www.philippekacou.org/es"><img src="https://www.philippekacou.org/assets/front/images/flags/Spain_flat.png"  alt="Espagnol" /></a></li>
-                        <li><a href="https://www.philippekacou.org/pt"><img src="https://www.philippekacou.org/assets/front/images/flags/Portugal_flat.png"  alt="Portuguais" /></a></li> -->
-                        <!-- <li><a href="https://www.philippekacou.org/de"><img src="https://www.philippekacou.org/assets/front/images/flags/German_flat.png"  alt="Allemand" /></a></li> -->
+                        
                     </ul>
                     <div class="verse text-muted" lang="fr">
                          <p class="text-justify">
@@ -88,7 +85,8 @@ la visitation d'un Ange qui le commissionne pour un Message destiné au Salut de
                     </div>
                     <div class="download download-fr">
                         <a href="https://play.google.com/store/apps/details?id=com.matth25.prophetekacou">
-                            <img src="https://www.philippekacou.org/assets/front/images/Ban_GPlay_fr.png"  alt="Application Android" class="img-responsive" />
+                            
+                            <img src="/static/images/Ban_GPlay_{{ lang }}.png"  alt="Application Android" class="img-responsive" />
                         </a>
                     </div>
                 </div>
