@@ -41,13 +41,13 @@
     <script>
         
 
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/"+locale+"/sdk.js#xfbml=1&version=v2.6";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+        // (function(d, s, id) {
+        //   var js, fjs = d.getElementsByTagName(s)[0];
+        //   if (d.getElementById(id)) return;
+        //   js = d.createElement(s); js.id = id;
+        //   js.src = "//connect.facebook.net/"+locale+"/sdk.js#xfbml=1&version=v2.6";
+        //   fjs.parentNode.insertBefore(js, fjs);
+        // }(document, 'script', 'facebook-jssdk'));
 
         
 
@@ -62,10 +62,15 @@
                 </div>
                 <div class="grid_7 text-center alpha">
                     <ul class="languages-list list-inline">
-                        <li><a href="https://www.philippekacou.org/fr"><img src="https://www.philippekacou.org/assets/front/images/flags/France_flat.png"  alt="Français" /></a></li>
-                        <li><a href="https://www.philippekacou.org/en"><img src="https://www.philippekacou.org/assets/front/images/flags/UK_flat.png"  alt="Anglais" /></a></li>
+                        
+                        {% for item in langs %}
+                        <li><a href="{% url 'index' item.initial %}"><img src="/static/images/flags/{{ item.initial }}.png"  alt="Français" /></a></li>
+                        {% endfor %}
+                            
+                        
+                        <!-- <li><a href="https://www.philippekacou.org/en"><img src="https://www.philippekacou.org/assets/front/images/flags/UK_flat.png"  alt="Anglais" /></a></li>
                         <li><a href="https://www.philippekacou.org/es"><img src="https://www.philippekacou.org/assets/front/images/flags/Spain_flat.png"  alt="Espagnol" /></a></li>
-                        <li><a href="https://www.philippekacou.org/pt"><img src="https://www.philippekacou.org/assets/front/images/flags/Portugal_flat.png"  alt="Portuguais" /></a></li>
+                        <li><a href="https://www.philippekacou.org/pt"><img src="https://www.philippekacou.org/assets/front/images/flags/Portugal_flat.png"  alt="Portuguais" /></a></li> -->
                         <!-- <li><a href="https://www.philippekacou.org/de"><img src="https://www.philippekacou.org/assets/front/images/flags/German_flat.png"  alt="Allemand" /></a></li> -->
                     </ul>
                     <div class="verse text-muted" lang="fr">
@@ -141,7 +146,7 @@ la visitation d'un Ange qui le commissionne pour un Message destiné au Salut de
             <a href="https://www.philippekacou.org/fr/traduction-audio">Traduction</a>
         </li> -->
         <li class="last">
-            <a href="{% url 'contact' %}" class="{% active_link 'contact' 'active' %}">Contacts</a>
+            <a href="{% url 'contact' lang %}" class="{% active_link 'contact' 'active' %}">Contacts</a>
         </li>
     </ul>
 
