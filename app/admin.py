@@ -6,8 +6,10 @@ from . import models
 
 class ActualiteAdmin(admin.ModelAdmin):
 
-    list_display = ('field_id', 'date', 'heure', 'details')
+    list_display = ('field_id', 'date', 'heure')
     list_filter = ('date',)
+    ordering = ['field_id']
+    list_display_links = ['date']
 
 
 class LangueAdmin(admin.ModelAdmin):
@@ -19,6 +21,7 @@ class LangueAdmin(admin.ModelAdmin):
         'type_contenu',
         'sens_lecture',
     )
+    ordering = ['field_id']
     list_filter = (
         'type_contenu',
         'sens_lecture',
@@ -28,20 +31,26 @@ class LangueAdmin(admin.ModelAdmin):
 class PredicationAdmin(admin.ModelAdmin):
 
     list_display = (
-        'field_id',
         'numero',
         'nom_pred',
         'titre',
         'duree',
         'id_langue',
     )
+    ordering = ['field_id']
     list_filter = ('id_langue',)
+    list_display_links = ['nom_pred']
+    
 
 
 class VersetAdmin(admin.ModelAdmin):
 
-    list_display = ('field_id', 'numero','id_langue', 'id_pred')
-    list_filter = ('id_langue',)
+    list_display = ('numero','id_langue', 'id_pred')
+    list_filter = ('id_langue', )
+    ordering = ['field_id']
+    list_per_page = 100
+    search_fields = ['numero','id_langue',]
+
 
 
 def _register(model, admin_class):
