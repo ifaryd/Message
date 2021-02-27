@@ -21,6 +21,7 @@ def predications_lists(request, lang):
     lang = lang
     currentpage = "predications"
     predications = models.Predication.objects.filter(id_langue__initial = lang)
+
     return render(request, 'predications-lists.html', locals())
 
 def predications_detail(request, lang, predid):

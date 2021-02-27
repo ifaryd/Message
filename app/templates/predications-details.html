@@ -6,8 +6,8 @@ Bienvenue sur le site officiel du Prophète
 
 {% block breadcumb %}
 <ol class="breadcrumb">
-    <li><a href="https://www.philippekacou.org/fr">Accueil</a></li>
-    <li><a href="https://www.philippekacou.org/fr/predications/predications-ecrites">Prédications écrites</a></li>
+    <li><a href="/{{ lang }}">Acceuil</a></li>
+    <li><a href="ecrites">Prédications écrites</a></li>
     <li class="active"><span>{{ predications.titre }}</span></li>
 </ol>
 {% endblock breadcumb %}
@@ -217,11 +217,19 @@ Bienvenue sur le site officiel du Prophète
         </div>
 			<aside class="entry-related-links">
 				<nav class="small">
-					<ul class="clearfix list-unstyled">
+                    <ul class="clearfix list-unstyled">
+                        <li class="pull-left">
+                            <a href="https://www.philippekacou.org/fr/predications/predications-ecrites?NumPred=3" rel="prev">Prédication précédente</a>
+                        </li>
+                        <li class="pull-right">
+                            <a href="{% url 'predication' lang pred_next %}" rel="next">Prédication suivante</a>
+                        </li>
+                    </ul>
+					<!-- <ul class="clearfix list-unstyled">
 																	<li class="pull-right">
 								<a href="{% url 'predication' lang pred_next %}" rel="next">Prédication suivante</a>
 							</li>
-										</ul>
+										</ul> -->
 				</nav>
         	</aside>
 		</article>

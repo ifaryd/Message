@@ -44,8 +44,17 @@ Prédications écrites
                 </div>
             </div>
         </form>
-        <nav class=""><ul class="cd-pagination clearfix"><li class="button"><a class="prev-btn disabled" href="#">Préc</a></li><li><a class="current">1</a></li><li><a href="?page=2">2</a></li><li><a href="?page=3">3</a></li><li class="button"><a href="?page=2" class="next-btn">Suiv</a></li><li class="button"><a href="?page=3" class="last active">Dernier</a></li></ul>
-</nav>
+
+        
+        <nav class="">
+            <ul class="cd-pagination clearfix"><li class="button"><a class="prev-btn disabled" href="#">Préc</a></li>
+                <li><a class="current">1</a></li>
+                <li><a href="?page=2">2</a></li>
+                <li><a href="?page=3">3</a></li>
+                <li class="button"><a href="?page=2" class="next-btn">Suiv</a></li>
+                <li class="button"><a href="?page=3" class="last active">Dernier</a></li>
+            </ul>
+        </nav>
 
         <table class="table table-condensed small">
             <thead>
@@ -61,7 +70,7 @@ Prédications écrites
                 
                 {% for pred in predications %}
                     
-                    <tr class="row-odd">
+                    <tr class="{% cycle 'row-odd' 'row-even' %}">
                         <td>{{ pred.nom_pred }}</td>
                         <td><a href="{% url 'predication' lang pred.pk %}">{{ pred.titre }}</a></td>
                         <td>
