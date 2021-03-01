@@ -30,4 +30,5 @@ def predications_detail(request, lang, predid):
     predications = models.Predication.objects.get(pk =int(predid))
     versets =  models.Verset.objects.filter(id_pred = predications)
     pred_next = str(int(predid) +1 )
+    pred_prev = str(int(predid) -1 )
     return render(request, 'predications-details.html', locals())
