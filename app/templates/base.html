@@ -65,7 +65,7 @@
                     <ul class="languages-list list-inline">
                         
                         {% for item in langs %}
-                        <li><a href="/{% url 'index' item.initial %}"><img src="/static/images/flags/{{ item.initial }}.png"  alt="{{ item.initial }}" /></a></li>
+                        <li><a href="{% url 'index' item.initial %}"><img src="/static/images/flags/{{ item.initial }}.png"  alt="{{ item.initial }}" /></a></li>
                         {% endfor %}
                             
                         

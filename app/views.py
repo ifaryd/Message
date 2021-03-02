@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
+from django.core.paginator import Paginator
+from django.utils.translation import ugettext as _
 from . import models 
 # Create your views here.
 def accueil(request):
     currentpage = ""
-    return redirect('/fr/')
+    return redirect('/fr')
 
 def index(request, lang):
     lang = lang
@@ -21,6 +23,16 @@ def predications_lists(request, lang):
     lang = lang
     currentpage = "predications"
     predications = models.Predication.objects.filter(id_langue__initial = lang)
+
+    paginator = Paginator(predications, 50)
+    try:
+        page = int(request.GET.get('page', '1'))
+    except:
+        page = 1     
+    try:
+        predications = paginator.page(page)
+    except(EmptyPage, InvalidPage):
+        predications = paginator.page(paginator.num_pages)
 
     return render(request, 'predications-lists.html', locals())
 

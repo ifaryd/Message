@@ -47,12 +47,21 @@ Prédications écrites
 
         
         <nav class="">
-            <ul class="cd-pagination clearfix"><li class="button"><a class="prev-btn disabled" href="#">Préc</a></li>
-                <li><a class="current">1</a></li>
-                <li><a href="?page=2">2</a></li>
-                <li><a href="?page=3">3</a></li>
-                <li class="button"><a href="?page=2" class="next-btn">Suiv</a></li>
-                <li class="button"><a href="?page=3" class="last active">Dernier</a></li>
+            <ul class="cd-pagination clearfix">
+                {% if predications.has_previous %}
+                <li class="button"><a class="prev-btn" href="?page={{ predications.previous_page_number }}">Préc</a></li>
+                {% endif %}
+                {% for pg in predications.paginator.page_range %}
+                    {% if predications.number == pg %}
+                    <li><a class="current" href="?page={{ pg }}">{{ pg }}</a></li>
+                    {% else %}
+                    <li><a href="?page={{ pg }}">{{ pg }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if predications.has_next %}
+                <li class="button"><a href="?page={{ predications.next_page_number }}" class="next-btn">Suiv</a></li>
+                {% endif %}
+                <li class="button"><a href="?page={{ paginator.num_pages }}" class="last active">Dernier</a></li>
             </ul>
         </nav>
 
@@ -151,8 +160,26 @@ Prédications écrites
                 {% endfor %}
             </tbody>
         </table>
-        <nav class=""><ul class="cd-pagination clearfix"><li class="button"><a class="prev-btn disabled" href="#">Préc</a></li><li><a class="current">1</a></li><li><a href="?page=2">2</a></li><li><a href="?page=3">3</a></li><li class="button"><a href="?page=2" class="next-btn">Suiv</a></li><li class="button"><a href="?page=3" class="last active">Dernier</a></li></ul>
-</nav>
+
+
+       <nav class="">
+            <ul class="cd-pagination clearfix">
+                {% if predications.has_previous %}
+                <li class="button"><a class="prev-btn" href="?page={{ predications.previous_page_number }}">Préc</a></li>
+                {% endif %}
+                {% for pg in predications.paginator.page_range %}
+                    {% if predications.number == pg %}
+                    <li><a class="current" href="?page={{ pg }}">{{ pg }}</a></li>
+                    {% else %}
+                    <li><a href="?page={{ pg }}">{{ pg }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if predications.has_next %}
+                <li class="button"><a href="?page={{ predications.next_page_number }}" class="next-btn">Suiv</a></li>
+                {% endif %}
+                <li class="button"><a href="?page={{ paginator.num_pages }}" class="last active">Dernier</a></li>
+            </ul>
+        </nav>
 
     </div>
 </section>
