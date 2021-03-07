@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Prédications écrites
@@ -30,7 +31,7 @@ Prédications écrites
                                 
             </nav>
         </aside>
-        <form class="form-search padding bordered bordered-gray" role="search" id="live-search" data-action="https://www.philippekacou.org/fr/predications/predications-ecrites/search" method="post">
+        <form class="form-search padding bordered bordered-gray" role="search" id="live-search" data-action="" method="post">
             <div class="form-line clearfix push_3">
                 <div class="grid_2 alpha">
                     <label for="keyword">Rechercher une prédication</label>
@@ -83,7 +84,7 @@ Prédications écrites
                         <td>{{ pred.nom_pred }}</td>
                         <td><a href="{% url 'predication' lang pred.pk %}">{{ pred.titre }}</a></td>
                         <td>
-                            <a href="https://www.philippekacou.org/file/download?id=1&amp;cat=predication&amp;type=pdf" title="Télécharger">PDF</a>
+                            <a href="{% url 'predication' lang pred.pk %}" title="Télécharger">PDF</a>
                         </td>
                         <td>
                             <div class="sm2-bar-ui compact flat full-width">
@@ -150,9 +151,9 @@ Prédications écrites
                         </td>
                         <td class="socials-col">
                             <div class="text-center">
-                                <a href="//facebook.com/sharer/sharer.php?url=https%3A%2F%2Fwww.philippekacou.org%2Ffr%2Fpredications%2Fpredications-ecrites%3FNumPred%3D1" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/facebook_square_32.png" title="Suivez nous sur facebook"></a>
-                                <a href="//twitter.com/sharer?url=https%3A%2F%2Fwww.philippekacou.org%2Ffr%2Fpredications%2Fpredications-ecrites%3FNumPred%3D1" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/twitter_square_32.png" title="Partagez sur Twitter"></a>
-                                <a href="//plus.google.com/share?url=https%3A%2F%2Fwww.philippekacou.org%2Ffr%2Fpredications%2Fpredications-ecrites%3FNumPred%3D1" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/google_plus_square_32.png" title="Partagez sur G+"></a>
+                                <a href="" target="_blank"><img src="{% static 'images/facebook_square_32.png' %}" title="Suivez nous sur facebook"></a>
+                                <a href="" target="_blank"><img src="{% static 'images/twitter_square_32.png' %}" title="Partagez sur Twitter"></a>
+                                <a href="" target="_blank"><img src="{% static 'images/google_plus_square_32.png' %}" title="Partagez sur G+"></a>
                             </div>
                         </td>
                     </tr>

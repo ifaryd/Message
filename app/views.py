@@ -5,7 +5,7 @@ from . import models
 # Create your views here.
 def accueil(request):
     currentpage = ""
-    return redirect('/fr')
+    return redirect('/fr/')
 
 def index(request, lang):
     lang = lang

@@ -113,8 +113,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/us 3.0/topics/i18n/
 
 LANGUAGES = [
-   ('en', ('English')),
    ('fr', ('Français')),
+   ('en', ('English')),
    ('es', ('Espagnol')),
    ('pt', ('Portuguais')),
 ]
@@ -128,6 +128,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
