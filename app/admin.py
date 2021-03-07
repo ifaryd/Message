@@ -41,7 +41,7 @@ class PredicationAdmin(admin.ModelAdmin):
 class VersetAdmin(admin.ModelAdmin):
 
     list_display = ('numero','id_langue', 'id_pred')
-    list_filter = ('id_langue', 'id_pred')
+    list_filter = ['id_langue']
     ordering = ['field_id']
     list_per_page = 100
     search_fields = ['numero','id_langue',]

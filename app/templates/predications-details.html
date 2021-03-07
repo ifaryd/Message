@@ -20,7 +20,7 @@ Bienvenue sur le site officiel du Prophète
 
 <div class="main-content grid_12 no-sidebar">
 	
-	<article class="entry predications pred-1" id="printJS-form">
+	<article class="entry predications pred-1" id="invoice">
 		<header class="entry-header clearfix">
             <h1 class="entry-title title pull-left pred-title">
                 <span class="chapter-name">{{ predications.nom_pred }}</span> : <span class="chapter-title">{{ predications.titre }}</span>
@@ -91,8 +91,8 @@ Bienvenue sur le site officiel du Prophète
 
 							<div class="sm2-playlist-wrapper">
 									<ul class="sm2-playlist-bd">
-										<li class="selected"><a href="https://www.philippekacou.org/audio/file?id=1&amp;cat=predication&amp;type=mp3" class="">C’EST ICI LA VOIX DE MATTHIEU 25 :6</a></li>
-										<!--<li><a href="https://www.philippekacou.org/fr/predications/predications-audio/file?idPred=1" class="">C’EST ICI LA VOIX DE MATTHIEU 25 :6</a></li>-->
+										<li class="selected"><a href="https://www.philippekacou.org/audio/file?id=1&amp;cat=predication&amp;type=mp3" class="">{{ predications.titre }}</a></li>
+										<!--<li><a href="https://www.philippekacou.org/fr/predications/predications-audio/file?idPred=1" class="">{{ predications.titre }}</a></li>-->
 									</ul>
 							</div>
 
@@ -114,7 +114,7 @@ Bienvenue sur le site officiel du Prophète
         <footer class="entry-details text-muted">
             <p>{{ predications.sous_titre }}</p>
         </footer>
-        <div class="entry-content">
+        <div class="entry-content" >
 
 			<div class="entry-body">
 				{% for verset in versets %}
@@ -126,10 +126,12 @@ Bienvenue sur le site officiel du Prophète
 			</div>  
         </div>
         <div class="actions">
+
         	<ul class="actions-list">
+				<!-- <button class="btn btn-primary" id="download"> download pdf</button> -->
         		<li>
                     <p class="action-label" >Télécharger le fichier PDF</p>
-        			<a href="" title="Télécharger" onclick="printJS('printJS-form', 'html', 'style=text-align:center')">
+        			<a href="" title="Télécharger">
         				Version PDF
         			</a>
         		</li>
@@ -159,7 +161,7 @@ Bienvenue sur le site officiel du Prophète
 	  	<div class="sm2-inline-element sm2-inline-status">
 
 		   	<div class="sm2-playlist">
-				<div class="sm2-playlist-target"><ul class="sm2-playlist-bd"><li>C’EST ICI LA VOIX DE MATTHIEU 25 :6</li></ul></div>
+				<div class="sm2-playlist-target"><ul class="sm2-playlist-bd"><li>{{ predications.titre }}</li></ul></div>
 		   	</div>
 
 		   	<div class="sm2-progress">
@@ -196,8 +198,8 @@ Bienvenue sur le site officiel du Prophète
 
 	  <div class="sm2-playlist-wrapper">
 			<ul class="sm2-playlist-bd">
-		  		<li class="selected"><a href="https://www.philippekacou.org/audio/file?id=1&amp;cat=predication&amp;type=mp3" class="">C’EST ICI LA VOIX DE MATTHIEU 25 :6</a></li>
-		  		<!--<li><a href="https://www.philippekacou.org/fr/predications/predications-audio/file?idPred=1" class="">C’EST ICI LA VOIX DE MATTHIEU 25 :6</a></li>-->
+		  		<li class="selected"><a href="https://www.philippekacou.org/audio/file?id=1&amp;cat=predication&amp;type=mp3" class="">{{ predications.titre }}</a></li>
+		  		<!--<li><a href="https://www.philippekacou.org/fr/predications/predications-audio/file?idPred=1" class="">{{ predications.titre }}</a></li>-->
 			</ul>
 	  </div>
 
@@ -237,22 +239,6 @@ Bienvenue sur le site officiel du Prophète
 </div>
 
 
-<script>
-	var doc = new jsPDF();
-var specialElementHandlers = {
-   '#editor': function (element, renderer) {
-	   return true;
-   }
-};
-
-$('#cmd').click(function () {
-   doc.fromHTML($('#content').html(), 15, 15, {
-	   'width': 170,
-		   'elementHandlers': specialElementHandlers
-   });
-   doc.save('sample-file.pdf');
-});
-  </script>
 
 {% endblock content %}
 
