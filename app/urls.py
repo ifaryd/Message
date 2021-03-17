@@ -9,6 +9,7 @@ urlpatterns = [
     path('<slug:lang>/predications', views.predications_lists, name="predications"),
     path('<slug:lang>/predication/<int:predid>', views.predications_detail, name="predication"),
     path('<slug:lang>/audio', views.predications_lists, name="predications"),
+    path('<slug:lang>/result', views.result, name="result"),
 
     
     #---- actualite

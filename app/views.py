@@ -14,6 +14,13 @@ def index(request, lang):
     # actus = models.Actualite.objects.all()[:3]
     return render(request, 'index.html', locals())
 
+def result(request, lang):
+    lang = lang
+    currentpage = ""
+    
+    # actus = models.Actualite.objects.all()[:3]
+    return render(request, 'result.html', locals())
+
 def contact(request, lang):
     lang = lang
     currentpage = ""
