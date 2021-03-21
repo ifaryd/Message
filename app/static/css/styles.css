@@ -1,6 +1,14 @@
 /*
+
+
+
 *Pagination
 **/
+
+.link{
+  background-color: yellow;
+}
+
 .cd-pagination {
   padding-left: 0;
   /*margin: 2em auto 4em;*/

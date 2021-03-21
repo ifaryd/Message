@@ -46,7 +46,20 @@ class Verset(models.Model):
     id_langue = models.ForeignKey('Langue', db_column='id_langue', on_delete=models.CASCADE)
     id_pred = models.ForeignKey('Predication', db_column='id_pred', on_delete=models.CASCADE, related_name="pred_verset")
     #id_parab = models.ForeignKey('Parabole', on_delete=models.CASCADE)
+
     def __str__(self):
         return self.contenu
     class Meta:
         db_table = 'verset'
+
+from django import template
+from django.utils.safestring import mark_safe
+from django.utils.html import conditional_escape
+from django.template.defaultfilters import stringfilter
+
+register = template.Library()
+
+@register.filter(needs_autoescape=True)
+@stringfilter
+def highlight(value, search_term, autoescape=True):
+    return mark_safe(value.replace(search_term, "<span class='highlight'>%s</span>" % search_term))

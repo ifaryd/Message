@@ -5,6 +5,7 @@ from . import models
 from django.db.models import Q
 # Create your views here.
 # actus = models.Actualite.objects.all()[:3]
+
 def accueil(request):
     currentpage = ""
     return redirect('/fr/')
@@ -23,10 +24,13 @@ def result(request, lang):
     versets =  models.Verset.objects.filter(id_langue__initial = lang)
 
     search_query = request.GET.get('search', '')
-    if search_query:
+    if  search_query:
         versets = models.Verset.objects.filter(Q(contenu__icontains = search_query), id_langue__initial = lang)
     else:
         versets = models.Verset.objects.filter(id_langue__initial = lang)
+    
+
+    
 
     paginator = Paginator(versets, 50)
     try:
@@ -37,6 +41,18 @@ def result(request, lang):
         versets = paginator.page(page)
     except(EmptyPage, InvalidPage):
         versets = paginator.page(paginator.num_pages)
+
+    
+    paginator = Paginator(predications, 1)
+    try:
+        page = int(request.GET.get('page', '1'))
+    except:
+        page = 1     
+    try:
+        predications = paginator.page(page)
+    except(EmptyPage, InvalidPage):
+        predications = paginator.page(predications.num_pages)
+
 
     return render(request, 'result.html', locals())
 
@@ -80,4 +96,5 @@ def predications_detail(request, lang, predid):
 
 
 
+    
     

@@ -23,7 +23,7 @@ Résultats de la recherche
     <h1 class="page-header">Résultats de la recherche</h1>
     <div class="page-content">
         <aside>
-            <p class="text-muted"><strong>145</strong> prédication(s) trouvée(s) avec le mot clé <strong>ed</strong></p>
+            <p class="text-muted"><strong>{{ paginator.num_pages }}</strong> prédication(s) trouvée(s) avec le mot clé <strong>{{ search_query }} </strong></p>
         </aside>
 
 
@@ -58,7 +58,7 @@ Résultats de la recherche
                 {% if versets.has_next %}
                 <li class="button"><a href="?page={{ versets.next_page_number }}" class="next-btn">Suiv</a></li>
                 {% endif %}
-                <li class="button"><a href="?page={{ versets.num_pages }}" class="last active">Dernier</a></li>
+                <li class="button"><a href="?page={{ paginator.num_pages }}" class="last active">Dernier</a></li>
             </ul>
         </nav>
 
@@ -66,10 +66,10 @@ Résultats de la recherche
         <ul class="list-unstyled list-results">
             {% for verset in versets %}
             <li>
-            <h4 class="result-header"><a href="https://www.philippekacou.org/fr/predications/predications-ecrites?idPred=1">{{ predications.titre }}</a></h4>
+            <h4 class="result-header"><a href="https://www.philippekacou.org/fr/predications/predications-ecrites?idPred=1">{{ verset.id_pred }}</a></h4>
             <div class="result-content">
-                <p>1&nbsp;{{ verset.contenu }}</p>
-                <a href="https://www.philippekacou.org/fr/predications/predications-ecrites?NumPred=1">Lire suite</a>
+                <p class="">{{ verset.contenu | truncatewords:100 }}</p>
+                <a href="">Lire suite</a>
             </div>
             </li>   
             {% endfor %} 
