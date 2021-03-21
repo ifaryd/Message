@@ -3,6 +3,7 @@ from django.core.paginator import Paginator
 from django.utils.translation import ugettext as _
 from . import models 
 from django.db.models import Q
+
 # Create your views here.
 # actus = models.Actualite.objects.all()[:3]
 
@@ -30,8 +31,6 @@ def result(request, lang):
         versets = models.Verset.objects.filter(id_langue__initial = lang)
     
 
-    
-
     paginator = Paginator(versets, 50)
     try:
         page = int(request.GET.get('page', '1'))
@@ -55,6 +54,7 @@ def result(request, lang):
 
 
     return render(request, 'result.html', locals())
+
 
 
 def contact(request, lang):

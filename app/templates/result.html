@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load app_filters %}
 {% load static %}
 
 {% block title %}
@@ -23,7 +24,7 @@ Résultats de la recherche
     <h1 class="page-header">Résultats de la recherche</h1>
     <div class="page-content">
         <aside>
-            <p class="text-muted"><strong>{{ paginator.num_pages }}</strong> prédication(s) trouvée(s) avec le mot clé <strong>{{ search_query }} </strong></p>
+            <p class="text-muted"><strong>{{ versets.paginator.count }}</strong> prédication(s) trouvée(s) avec le mot clé <strong>{{ search_query }} </strong></p>
         </aside>
 
 
@@ -68,7 +69,7 @@ Résultats de la recherche
             <li>
             <h4 class="result-header"><a href="https://www.philippekacou.org/fr/predications/predications-ecrites?idPred=1">{{ verset.id_pred }}</a></h4>
             <div class="result-content">
-                <p class="">{{ verset.contenu | truncatewords:100 }}</p>
+                <p class="">{{ verset.contenu|highlight:search_query|truncatewords:100 }}</p>
                 <a href="">Lire suite</a>
             </div>
             </li>   
