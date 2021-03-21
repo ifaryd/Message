@@ -25,17 +25,19 @@ Résultats de la recherche
         <aside>
             <p class="text-muted"><strong>145</strong> prédication(s) trouvée(s) avec le mot clé <strong>ed</strong></p>
         </aside>
-        <form class="form-search padding bordered bordered-gray" role="search" id="live-search" data-action="" method="post">
+
+
+        <form class="form-search padding bordered bordered-gray" role="search" action="{% url 'result' lang %}">
             <div class="form-line clearfix push_3">
                 <div class="grid_2 alpha">
                     <label for="keyword">Rechercher une prédication</label>
                 </div>
                 <div class="input-box grid_4 omega">
-                    <input type="search" name="q" placeholder="Entrez un mot-clé" autocomplete="off" required="" id="keyword">
+                    <input type="search" name="search" placeholder="Entrez un mot-clé" autocomplete="off" required="">
                     <div class="results-wrapper"></div>
                 </div>
                 <div class="grid_2 alpha omega">
-                    <button class="form-btn btn-black"><span class="fa fa-search"></span></button>
+                    <button  type="submit" class="form-btn btn-black"><span class="fa fa-search"></span></button>
                 </div>
             </div>
         </form>
@@ -43,50 +45,52 @@ Résultats de la recherche
         
         <nav class="">
             <ul class="cd-pagination clearfix">
-                {% if predications.has_previous %}
-                <li class="button"><a class="prev-btn" href="?page={{ predications.previous_page_number }}">Préc</a></li>
+                {% if versets.has_previous %}
+                <li class="button"><a class="prev-btn" href="?page={{ versets.previous_page_number }}">Préc</a></li>
                 {% endif %}
-                {% for pg in predications.paginator.page_range %}
-                    {% if predications.number == pg %}
+                {% for pg in versets.paginator.page_range %}
+                    {% if versets.number == pg %}
                     <li><a class="current" href="?page={{ pg }}">{{ pg }}</a></li>
                     {% else %}
                     <li><a href="?page={{ pg }}">{{ pg }}</a></li>
                     {% endif %}
                 {% endfor %}
-                {% if predications.has_next %}
-                <li class="button"><a href="?page={{ predications.next_page_number }}" class="next-btn">Suiv</a></li>
+                {% if versets.has_next %}
+                <li class="button"><a href="?page={{ versets.next_page_number }}" class="next-btn">Suiv</a></li>
                 {% endif %}
-                <li class="button"><a href="?page={{ paginator.num_pages }}" class="last active">Dernier</a></li>
+                <li class="button"><a href="?page={{ versets.num_pages }}" class="last active">Dernier</a></li>
             </ul>
         </nav>
 
        
         <ul class="list-unstyled list-results">
+            {% for verset in versets %}
             <li>
-            <h4 class="result-header"><a href="https://www.philippekacou.org/fr/predications/predications-ecrites?idPred=1">C’EST ICI LA VOIX DE MATTHIEU 25 :6</a></h4>
+            <h4 class="result-header"><a href="https://www.philippekacou.org/fr/predications/predications-ecrites?idPred=1">{{ predications.titre }}</a></h4>
             <div class="result-content">
-                <p>1&nbsp;Comme les prophètes de la Bible en avril 1993 moi Kacou Philippe, un homme qui n’avait jamais été dans une église, je re&amp;cc…</p>
+                <p>1&nbsp;{{ verset.contenu }}</p>
                 <a href="https://www.philippekacou.org/fr/predications/predications-ecrites?NumPred=1">Lire suite</a>
             </div>
-            </li>    
+            </li>   
+            {% endfor %} 
         </ul>
 
-       <nav class="">
+        <nav class="">
             <ul class="cd-pagination clearfix">
-                {% if predications.has_previous %}
-                <li class="button"><a class="prev-btn" href="?page={{ predications.previous_page_number }}">Préc</a></li>
+                {% if versets.has_previous %}
+                <li class="button"><a class="prev-btn" href="?page={{ versets.previous_page_number }}">Préc</a></li>
                 {% endif %}
-                {% for pg in predications.paginator.page_range %}
-                    {% if predications.number == pg %}
+                {% for pg in versets.paginator.page_range %}
+                    {% if versets.number == pg %}
                     <li><a class="current" href="?page={{ pg }}">{{ pg }}</a></li>
                     {% else %}
                     <li><a href="?page={{ pg }}">{{ pg }}</a></li>
                     {% endif %}
                 {% endfor %}
-                {% if predications.has_next %}
-                <li class="button"><a href="?page={{ predications.next_page_number }}" class="next-btn">Suiv</a></li>
+                {% if versets.has_next %}
+                <li class="button"><a href="?page={{ versets.next_page_number }}" class="next-btn">Suiv</a></li>
                 {% endif %}
-                <li class="button"><a href="?page={{ paginator.num_pages }}" class="last active">Dernier</a></li>
+                <li class="button"><a href="?page={{ versets.num_pages }}" class="last active">Dernier</a></li>
             </ul>
         </nav>
 
