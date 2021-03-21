@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from django.utils.translation import ugettext as _
 from . import models 
+from django.db.models import Q
 # Create your views here.
 def accueil(request):
     currentpage = ""
@@ -37,7 +38,7 @@ def predications_lists(request, lang):
     
     search_query = request.GET.get('search', '')
     if search_query:
-        predications = models.Predication.objects.filter(id_langue__initial = lang, titre__icontains = search_query)
+        predications = models.Predication.objects.filter(Q(titre__icontains = search_query) | Q(nom_pred__icontains = search_query), id_langue__initial = lang)
     else:
         predications = models.Predication.objects.filter(id_langue__initial = lang)
 
