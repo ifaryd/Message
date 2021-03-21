@@ -22,7 +22,7 @@ Prédications écrites
     <div class="page-content">
         <aside>
             <p>
-                <a href="https://www.philippekacou.org/fr/ressources/aide"><span class="fa fa-question-circle"></span> Aide pour la lecture dans la recherche des sermons  </a>
+                <a href=""><span class="fa fa-question-circle"></span> Aide pour la lecture dans la recherche des sermons  </a>
             </p>
             <nav class="bg-gray text-uppercase padding bg-gray">
                 <ul class="list-unstyled list">
@@ -31,17 +31,19 @@ Prédications écrites
                                 
             </nav>
         </aside>
-        <form class="form-search padding bordered bordered-gray" role="search" id="live-search" data-action="" method="post">
+
+
+        <form class="form-search padding bordered bordered-gray" role="search" action="{% url 'predications' lang %}">
             <div class="form-line clearfix push_3">
                 <div class="grid_2 alpha">
                     <label for="keyword">Rechercher une prédication</label>
                 </div>
                 <div class="input-box grid_4 omega">
-                    <input type="search" name="q" placeholder="Entrez un mot-clé" autocomplete="off" required="" id="keyword">
+                    <input type="search" name="search" placeholder="Entrez un mot-clé" autocomplete="off" required="">
                     <div class="results-wrapper"></div>
                 </div>
                 <div class="grid_2 alpha omega">
-                    <button class="form-btn btn-black"><span class="fa fa-search"></span></button>
+                    <button  type="submit" class="form-btn btn-black"><span class="fa fa-search"></span></button>
                 </div>
             </div>
         </form>

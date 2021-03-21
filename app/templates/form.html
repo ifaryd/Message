@@ -1,0 +1,11 @@
+<form action="{% url 'form' lang %}" method="get" >
+    <input type="text" name="recherche">
+    <button type="submit">Recherche</button>
+</form> 
+
+
+{{ error }}
+
+    {% for n in predication %}
+        <h2>{{ n.titre }} </h2>
+    {%  endfor%}

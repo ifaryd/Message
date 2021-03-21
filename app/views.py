@@ -14,12 +14,17 @@ def index(request, lang):
     # actus = models.Actualite.objects.all()[:3]
     return render(request, 'index.html', locals())
 
+
+
 def result(request, lang):
     lang = lang
     currentpage = ""
     
     # actus = models.Actualite.objects.all()[:3]
     return render(request, 'result.html', locals())
+
+
+
 
 def contact(request, lang):
     lang = lang
@@ -29,7 +34,12 @@ def contact(request, lang):
 def predications_lists(request, lang):
     lang = lang
     currentpage = "predications"
-    predications = models.Predication.objects.filter(id_langue__initial = lang)
+    
+    search_query = request.GET.get('search', '')
+    if search_query:
+        predications = models.Predication.objects.filter(id_langue__initial = lang, titre__icontains = search_query)
+    else:
+        predications = models.Predication.objects.filter(id_langue__initial = lang)
 
     paginator = Paginator(predications, 50)
     try:
@@ -41,7 +51,7 @@ def predications_lists(request, lang):
     except(EmptyPage, InvalidPage):
         predications = paginator.page(paginator.num_pages)
 
-    return render(request, 'predications-lists.html', locals())
+    return render(request, 'predications-lists.html',  locals())
 
 def predications_detail(request, lang, predid):
     lang = lang

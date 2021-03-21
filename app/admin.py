@@ -54,6 +54,6 @@ def _register(model, admin_class):
 
 
 _register(models.Actualite, ActualiteAdmin)
-_register(models.Langue, LangueAdmin)
+_register(models.Langue, LangueAdmin)   
 _register(models.Predication, PredicationAdmin)
 _register(models.Verset, VersetAdmin)
