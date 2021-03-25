@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#: app/templates/form.html:13
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-01 16:17+0000\n"
+"POT-Creation-Date: 2021-03-25 07:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: app/templates/base.html:76
+#: app/templates/base.html:9
+msgid "Prophète Kacou Philippe"
+msgstr "Prophet Kacou Philippe"
+
+#: app/templates/base.html:9
+msgid "Portail du Ciel"
+msgstr "Heaven Portal"
+
+#: app/templates/base.html:79
 msgid ""
 "Comme les prophètes de la Bible, en avril 1993, un homme qui n'avait jamais "
 "été dans une église reçoit en vision,"
@@ -26,7 +35,7 @@ msgstr ""
 "Like the prophets of the Bible, In April 1993, a man who had never been in a "
 "church receives in a vision,"
 
-#: app/templates/base.html:77
+#: app/templates/base.html:80
 msgid ""
 "la visitation d'un Ange qui le commissionne pour un Message destiné au Salut "
 "de l'humanité en accomplissement de "
@@ -34,137 +43,218 @@ msgstr ""
 "the visitation of an Angel who commissions him for a Message destined to the "
 "entire earth in fulfillment of the ministry of "
 
-#: app/templates/base.html:78
+#: app/templates/base.html:81
 msgid "Matth.25:6"
 msgstr "Matthew 25:6"
 
-#: app/templates/base.html:78
+#: app/templates/base.html:81
 msgid "et d'"
 msgstr " and"
 
-#: app/templates/base.html:78
+#: app/templates/base.html:81
 msgid "Apoc.12:14"
 msgstr "Revelation 12:14."
 
-#: app/templates/base.html:84
+#: app/templates/base.html:87
 msgid "Vous êtes le"
 msgstr "You are the"
 
-#: app/templates/base.html:84
+#: app/templates/base.html:87
 msgid "ème"
 msgstr "th"
 
-#: app/templates/base.html:84
+#: app/templates/base.html:87
 msgid "visiteur du site depuis Avril 2007"
 msgstr " guest since April, 2007"
 
-#: app/templates/base.html:100
+#: app/templates/base.html:103 app/templates/predications-lists.html:10
 msgid "Accueil"
 msgstr "Home"
 
-#: app/templates/base.html:103 app/templates/base.html:179
+#: app/templates/base.html:106 app/templates/base.html:182
 msgid "Prédications"
 msgstr "Sermons"
 
-#: app/templates/base.html:105 app/templates/base.html:181
+#: app/templates/base.html:108 app/templates/base.html:184
+#: app/templates/predications-details.html:11
+#: app/templates/predications-lists.html:6
+#: app/templates/predications-lists.html:11
+#: app/templates/predications-lists.html:22
 msgid "Prédications écrites"
 msgstr "Text sermons"
 
-#: app/templates/base.html:106 app/templates/base.html:182
+#: app/templates/base.html:109 app/templates/base.html:185
 msgid "Prédications vidéos"
 msgstr "Video sermons"
 
-#: app/templates/base.html:107 app/templates/base.html:183
+#: app/templates/base.html:110 app/templates/base.html:186
 msgid "Prédications audio"
 msgstr "Audio sermons"
 
-#: app/templates/base.html:112 app/templates/base.html:187
+#: app/templates/base.html:115 app/templates/base.html:190
 msgid "Médias"
 msgstr "Media"
 
-#: app/templates/base.html:114 app/templates/base.html:189
+#: app/templates/base.html:117 app/templates/base.html:192
 msgid "Presse écrite"
 msgstr "In the press"
 
-#: app/templates/base.html:115 app/templates/base.html:190
+#: app/templates/base.html:118 app/templates/base.html:193
 msgid "Emissions radio"
 msgstr "Radio"
 
-#: app/templates/base.html:116 app/templates/base.html:191
+#: app/templates/base.html:119 app/templates/base.html:194
 msgid "Emissions TV"
 msgstr "TV"
 
-#: app/templates/base.html:117 app/templates/base.html:192
+#: app/templates/base.html:120 app/templates/base.html:195
 msgid "Autres vidéos"
 msgstr ""
 
-#: app/templates/base.html:121
+#: app/templates/base.html:124
 msgid "Galérie Photos"
 msgstr "Pictures"
 
-#: app/templates/base.html:125 app/templates/base.html:196
+#: app/templates/base.html:128 app/templates/base.html:199
 msgid "Ressources"
 msgstr "Ressources"
 
-#: app/templates/base.html:127 app/templates/base.html:198
+#: app/templates/base.html:130 app/templates/base.html:201
 msgid "Témoignages"
 msgstr "Testmonies"
 
-#: app/templates/base.html:128 app/templates/base.html:199
+#: app/templates/base.html:131 app/templates/base.html:202
 msgid "Actualités"
 msgstr "News"
 
-#: app/templates/base.html:129
+#: app/templates/base.html:132
 #, fuzzy
 #| msgid "Les pépites d'or"
 msgid "Les pépites d'or"
 msgstr "Golden nugget"
 
-#: app/templates/base.html:130 app/templates/base.html:200
+#: app/templates/base.html:133 app/templates/base.html:203
 msgid "Aide pour la lecture"
 msgstr "Assistance for sermons"
 
-#: app/templates/base.html:131 app/templates/base.html:201
+#: app/templates/base.html:134 app/templates/base.html:204
 msgid "Logiciels importants"
 msgstr "Importants software"
 
-#: app/templates/base.html:135
+#: app/templates/base.html:138
 msgid "Adorations"
 msgstr "Worship"
 
-#: app/templates/base.html:137
+#: app/templates/base.html:140
 msgid "Louanges"
 msgstr "Praises"
 
-#: app/templates/base.html:138
+#: app/templates/base.html:141
 msgid "Mélodies"
 msgstr "Melodies"
 
-#: app/templates/base.html:142
+#: app/templates/base.html:145
 msgid "Le Cri de minuit dans le monde"
 msgstr "The midnight Cry in the world"
 
-#: app/templates/base.html:148
+#: app/templates/base.html:151
 msgid "Contacts"
 msgstr "Contacts"
 
-#: app/templates/base.html:205
+#: app/templates/base.html:208
 msgid "Newsletter"
 msgstr "Newsletter"
 
-#: app/templates/base.html:206
+#: app/templates/base.html:209
 msgid ""
 "Recevez dans votre boite mail les actualités et prédications du prophète"
 msgstr "Receive in your mailbox the latest news and sermons of the Prophet"
 
-#: app/templates/base.html:213
+#: app/templates/base.html:211
+msgid "Entrez votre adresse mail"
+msgstr "Enter your email adress"
+
+#: app/templates/base.html:216
 msgid "Contacts du prophète"
 msgstr "Contacts of the Prophet"
 
-#: app/templates/base.html:238
+#: app/templates/base.html:241
 msgid "Tous droits réservés"
 msgstr "All rights reserved"
 
-#: app/templates/base.html:239
+#: app/templates/base.html:242
 msgid "Nous contacter"
 msgstr "Contacts us"
+
+#: app/templates/index.html:5
+msgid "Bienvenue sur le site officiel du Prophète"
+msgstr "Welcome to the official website of the Prophet"
+
+#: app/templates/predications-details.html:10
+msgid "Acceuil"
+msgstr "Home"
+
+#: app/templates/predications-details.html:126
+msgid "Chapitres similaires"
+msgstr "Similar chapters"
+
+#: app/templates/predications-details.html:134
+#, fuzzy
+#| msgid "Télécharger"
+msgid "Télécharger le fichier PDF"
+msgstr "Download PDF"
+
+#: app/templates/predications-details.html:140
+#, fuzzy
+#| msgid "Télécharger"
+msgid "Télécharger le fichier Audio"
+msgstr "Download audio file"
+
+#: app/templates/predications-details.html:148
+#: app/templates/predications-lists.html:79
+msgid "Ecouter"
+msgstr "Listen"
+
+#: app/templates/predications-details.html:212
+#: app/templates/predications-lists.html:80
+msgid "Partagez ce chapitre"
+msgstr "Share this Chapter"
+
+#: app/templates/predications-lists.html:26
+msgid "Aide pour la lecture dans la recherche des sermons"
+msgstr "To help you read the preachings"
+
+#: app/templates/predications-lists.html:40
+msgid "Rechercher une prédication"
+msgstr "Search for a sermon"
+
+#: app/templates/predications-lists.html:43
+msgid "Entrez un mot-clé"
+msgstr "Enter a keyword"
+
+#: app/templates/predications-lists.html:56
+#: app/templates/predications-lists.html:173
+msgid "Préc"
+msgstr "Prev"
+
+#: app/templates/predications-lists.html:66
+#: app/templates/predications-lists.html:183
+msgid "Suiv"
+msgstr "Next"
+
+#: app/templates/predications-lists.html:68
+#: app/templates/predications-lists.html:185
+msgid "Dernier"
+msgstr "Last"
+
+#: app/templates/predications-lists.html:76
+msgid "Chapitre"
+msgstr "Chapter"
+
+#: app/templates/predications-lists.html:77
+msgid "Titre"
+msgstr "Title"
+
+#: app/templates/predications-lists.html:78
+msgid "Télécharger"
+msgstr "Download"

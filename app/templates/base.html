@@ -6,7 +6,7 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8" />
-	<title>Prophète Kacou Philippe &mdash; Portail du Ciel | {% block title %}{% endblock title %}</title> 
+	<title>{%  trans 'Prophète Kacou Philippe' %} &mdash; {%  trans 'Portail du Ciel' %} | {% block title %}{% endblock title %}</title> 
     	<!--<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>-->
     <link rel="apple-touch-icon" sizes="57x57" href="{% static 'images/favicon/apple-touch-icon-57x57.png' %}">
     <link rel="apple-touch-icon" sizes="60x60" href="{% static 'images/favicon/apple-touch-icon-60x60.png' %}">
@@ -32,7 +32,7 @@
     <link rel="stylesheet"  href="{% static 'css/jquery.fancybox.css' %}">
     <link rel="stylesheet"  href="{% static 'css/font-awesome.min.css' %}">
     <link rel="stylesheet"  href="{% static 'css/styles.css' %}">
-    <script src="{% static 'js/pdf.js' %}""></script>
+    <script src="{% static 'js/pdf.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
     
     
@@ -208,7 +208,7 @@
                     <h4 class="title">{% trans 'Newsletter' %}</h4>
                     <p>{% trans 'Recevez dans votre boite mail les actualités et prédications du prophète' %}</p>
                     <form class="newsletter-form small" method="post" data-action="https://www.philippekacou.org/ajax/subscribe">
-                        <input type="email" name="subscriber_email" placeholder="Entrez votre adresse mail" required />
+                        <input type="email" name="subscriber_email" placeholder="{%  trans 'Entrez votre adresse mail' %}" required />
                         <button class="form-btn">OK</button>
                     </form>
                 </div>

@@ -36,6 +36,8 @@ class Predication(models.Model):
     lien_video = models.TextField(blank=True, null= True)
     def __str__(self):
         return self.titre
+
+    
     class Meta:
         db_table = 'predication'
 

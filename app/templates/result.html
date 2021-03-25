@@ -67,7 +67,7 @@ Résultats de la recherche
         <ul class="list-unstyled list-results">
             {% for verset in versets %}
             <li>
-            <h4 class="result-header"><a href="https://www.philippekacou.org/fr/predications/predications-ecrites?idPred=1">{{ verset.id_pred }}</a></h4>
+            <h4 class="result-header"><a href="">{{ verset.id_pred }}</a></h4>
             <div class="result-content">
                 <p class="">{{ verset.contenu|highlight:search_query|truncatewords:100 }}</p>
                 <a href="">Lire suite</a>

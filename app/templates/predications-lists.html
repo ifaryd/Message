@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block title %}
-Prédications écrites
+ {% trans 'Prédications écrites' %}
 {% endblock title %}
 
 {% block breadcumb %}
-<ol class="breadcrumb"><li><a href="/{{ lang }}">Accueil</a></li>
-    <li class="active"><span>Prédications écrites</span></li>
+<ol class="breadcrumb"><li><a href="/{{ lang }}">{% trans 'Accueil' %}</a></li>
+    <li class="active"><span>{% trans 'Prédications écrites' %}</span></li>
     </ol>
 {% endblock breadcumb %}
 
@@ -18,11 +19,11 @@ Prédications écrites
 {% block content %}
 <div class="grid_12">
 <section class="page-section predications-ecrites">
-    <h1 class="page-header">Prédications écrites</h1>
+    <h1 class="page-header">{% trans 'Prédications écrites' %}</h1>
     <div class="page-content">
         <aside>
             <p>
-                <a href=""><span class="fa fa-question-circle"></span> Aide pour la lecture dans la recherche des sermons  </a>
+                <a href=""><span class="fa fa-question-circle"></span>{% trans 'Aide pour la lecture dans la recherche des sermons' %}</a>
             </p>
             <nav class="bg-gray text-uppercase padding bg-gray">
                 <ul class="list-unstyled list">
@@ -36,10 +37,10 @@ Prédications écrites
         <form class="form-search padding bordered bordered-gray" role="search" action="{% url 'result' lang %}">
             <div class="form-line clearfix push_3">
                 <div class="grid_2 alpha">
-                    <label for="keyword">Rechercher une prédication</label>
+                    <label for="keyword">{% trans 'Rechercher une prédication' %}</label>
                 </div>
                 <div class="input-box grid_4 omega">
-                    <input type="search" name="search" placeholder="Entrez un mot-clé" autocomplete="off" required="">
+                    <input type="search" name="search" placeholder="{% trans 'Entrez un mot-clé' %}" autocomplete="off" required="">
                     <div class="results-wrapper"></div>
                 </div>
                 <div class="grid_2 alpha omega">
@@ -52,7 +53,7 @@ Prédications écrites
         <nav class="">
             <ul class="cd-pagination clearfix">
                 {% if predications.has_previous %}
-                <li class="button"><a class="prev-btn" href="?page={{ predications.previous_page_number }}">Préc</a></li>
+                <li class="button"><a class="prev-btn" href="?page={{ predications.previous_page_number }}">{% trans 'Préc' %}</a></li>
                 {% endif %}
                 {% for pg in predications.paginator.page_range %}
                     {% if predications.number == pg %}
@@ -62,9 +63,9 @@ Prédications écrites
                     {% endif %}
                 {% endfor %}
                 {% if predications.has_next %}
-                <li class="button"><a href="?page={{ predications.next_page_number }}" class="next-btn">Suiv</a></li>
+                <li class="button"><a href="?page={{ predications.next_page_number }}" class="next-btn">{% trans 'Suiv' %}</a></li>
                 {% endif %}
-                <li class="button"><a href="?page={{ paginator.num_pages }}" class="last active">Dernier</a></li>
+                <li class="button"><a href="?page={{ paginator.num_pages }}" class="last active">{% trans 'Dernier' %}</a></li>
             </ul>
         </nav>
 
@@ -72,11 +73,11 @@ Prédications écrites
         <table class="table table-condensed small">
             <thead>
                 <tr> 
-                   <th>Chapitre</th>
-                   <th>Titre</th>
-                   <th>Télécharger</th> 
-                   <th>Ecouter</th>  
-                   <th class="text-center">Partagez ce chapitre</th>         
+                   <th>{% trans 'Chapitre' %}</th>
+                   <th>{% trans 'Titre' %}</th>
+                   <th>{% trans 'Télécharger' %}</th> 
+                   <th>{% trans 'Ecouter' %}</th>  
+                   <th class="text-center">{% trans 'Partagez ce chapitre' %}</th>         
                 </tr>
             </thead>
             <tbody>
@@ -169,7 +170,7 @@ Prédications écrites
        <nav class="">
             <ul class="cd-pagination clearfix">
                 {% if predications.has_previous %}
-                <li class="button"><a class="prev-btn" href="?page={{ predications.previous_page_number }}">Préc</a></li>
+                <li class="button"><a class="prev-btn" href="?page={{ predications.previous_page_number }}">{% trans 'Préc' %}</a></li>
                 {% endif %}
                 {% for pg in predications.paginator.page_range %}
                     {% if predications.number == pg %}
@@ -179,9 +180,9 @@ Prédications écrites
                     {% endif %}
                 {% endfor %}
                 {% if predications.has_next %}
-                <li class="button"><a href="?page={{ predications.next_page_number }}" class="next-btn">Suiv</a></li>
+                <li class="button"><a href="?page={{ predications.next_page_number }}" class="next-btn">{% trans 'Suiv' %}</a></li>
                 {% endif %}
-                <li class="button"><a href="?page={{ paginator.num_pages }}" class="last active">Dernier</a></li>
+                <li class="button"><a href="?page={{ paginator.num_pages }}" class="last active">{% trans 'Dernier' %}</a></li>
             </ul>
         </nav>
 

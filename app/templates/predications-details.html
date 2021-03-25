@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}
-Bienvenue sur le site officiel du Prophète
+{{ predications.titre }}
 {% endblock title %}
 
 {% block breadcumb %}
 <ol class="breadcrumb">
-    <li><a href="/{{ lang }}">Acceuil</a></li>
-    <li><a href="/{{ lang }}/predications">Prédications écrites</a></li>
+    <li><a href="/{{ lang }}">{%  trans 'Acceuil' %}</a></li>
+    <li><a href="/{{ lang }}/predications">{%  trans 'Prédications écrites' %}</a></li>
     <li class="active"><span>{{ predications.titre }}</span></li>
 </ol>
 {% endblock breadcumb %}
@@ -122,7 +123,7 @@ Bienvenue sur le site officiel du Prophète
 						{{ verset.contenu }}
 					</p>
 				{% endfor %}
-				<p><strong><em>Chapitres similaires&nbsp;:&nbsp;</em></strong><strong><em>Kc.36, Kc.64, Kc.130, Kc.131 et Kc.133</em></strong></p><p>&nbsp;</p>
+				<p><strong><em>{%  trans 'Chapitres similaires' %}&nbsp;:&nbsp;</em></strong><strong><em>Kc.36, Kc.64, Kc.130, Kc.131 et Kc.133</em></strong></p><p>&nbsp;</p>
 			</div>  
         </div>
         <div class="actions">
@@ -130,13 +131,13 @@ Bienvenue sur le site officiel du Prophète
         	<ul class="actions-list">
 				<!-- <button class="btn btn-primary" id="download"> download pdf</button> -->
         		<li>
-                    <p class="action-label" >Télécharger le fichier PDF</p>
+                    <p class="action-label" >{%  trans 'Télécharger le fichier PDF' %}</p>
         			<a href="" title="Télécharger">
         				Version PDF
         			</a>
         		</li>
         		<li>
-        			<p class="action-label">Télécharger le fichier Audio</p>
+        			<p class="action-label">{%  trans 'Télécharger le fichier Audio' %}</p>
                             			<div class="buttons">
 	        					        			<a href="https://www.philippekacou.org/file/download?id=1&amp;type=mp3&amp;cat=predication" title="Télécharger">
 		        				MP3
@@ -144,7 +145,7 @@ Bienvenue sur le site officiel du Prophète
 	        				        			        			</div>
                             		</li>
         		<li>
-        			<p class="action-label">Ecouter</p>
+        			<p class="action-label">{%  trans 'Ecouter' %}</p>
         			                        <div class="sm2-bar-ui compact flat full-width">
 
 	<div class="bd sm2-main-controls">
@@ -208,7 +209,7 @@ Bienvenue sur le site officiel du Prophète
 </div>
                             		</li>
         		<li>
-        			<p class="action-label">Partagez ce chapitre</p>
+        			<p class="action-label">{%  trans 'Partagez ce chapitre' %}</p>
         			<div class="buttons">
         				<a href="//facebook.com/sharer/sharer.php?url=https%3A%2F%2Fwww.philippekacou.org%2Ffr%2Fpredications%2Fpredications-ecrites%3FNumPred%3D1" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/facebook_square_32.png" title="Suivez nous sur facebook"></a>
                         <a href="//twitter.com/sharer?url=https%3A%2F%2Fwww.philippekacou.org%2Ffr%2Fpredications%2Fpredications-ecrites%3FNumPred%3D1" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/twitter_square_32.png" title="Partagez sur Twitter"></a>
@@ -221,7 +222,7 @@ Bienvenue sur le site officiel du Prophète
 				<nav class="small">
                     <ul class="clearfix list-unstyled">
                         <li class="pull-left">
-                            <a href="{% url 'predication' lang pred_prev %}" rel="prev">Prédication précédente</a>
+                            <a href="{% url 'predication' lang pred_prev %}" rel="prev">{{ predications.get_previous_by_title.titre }} </a>
                         </li>
                         <li class="pull-right">
                             <a href="{% url 'predication' lang pred_next %}" rel="next">Prédication suivante</a>
