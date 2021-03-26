@@ -222,10 +222,10 @@
 				<nav class="small">
                     <ul class="clearfix list-unstyled">
                         <li class="pull-left">
-                            <a href="{% url 'predication' lang pred_prev %}" rel="prev">{{ predications.get_previous_by_title.titre }} </a>
+                            <a href="{% url 'predication' lang pred_prev %}" rel="prev">{{ pred_prevo.titre }}</a>
                         </li>
                         <li class="pull-right">
-                            <a href="{% url 'predication' lang pred_next %}" rel="next">Prédication suivante</a>
+                            <a href="{% url 'predication' lang pred_next %}" rel="next">{{ pred_nexto.titre }}</a>
                         </li>
                     </ul>
 					<!-- <ul class="clearfix list-unstyled">
