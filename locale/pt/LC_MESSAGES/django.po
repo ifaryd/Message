@@ -21,55 +21,55 @@ msgstr ""
 
 #: app/templates/base.html:9
 msgid "Prophète Kacou Philippe"
-msgstr ""
+msgstr "Profeta Kacou Philippe"
 
 #: app/templates/base.html:9
 msgid "Portail du Ciel"
-msgstr ""
+msgstr "O (portão) do Céu"
 
 #: app/templates/base.html:79
 msgid ""
 "Comme les prophètes de la Bible, en avril 1993, un homme qui n'avait jamais "
 "été dans une église reçoit en vision,"
-msgstr ""
+msgstr "Como os profetas da Bíblia, em Abril de 1993, um homem que nunca tinha estado em uma igreja recebe, em visão,"
 
 #: app/templates/base.html:80
 msgid ""
 "la visitation d'un Ange qui le commissionne pour un Message destiné au Salut "
 "de l'humanité en accomplissement de "
-msgstr ""
+msgstr " a visitação de um Anjo que lhe comissionou para uma Mensagem destinada a toda terra em cumprimento do ministério"
 
 #: app/templates/base.html:81
 msgid "Matth.25:6"
-msgstr ""
+msgstr "Mateus 25:6"
 
 #: app/templates/base.html:81
 msgid "et d'"
-msgstr ""
+msgstr " e"
 
 #: app/templates/base.html:81
 msgid "Apoc.12:14"
-msgstr ""
+msgstr "Apocalipse 12:14"
 
 #: app/templates/base.html:87
 msgid "Vous êtes le"
-msgstr ""
+msgstr "Você é o"
 
 #: app/templates/base.html:87
 msgid "ème"
-msgstr ""
+msgstr " "
 
 #: app/templates/base.html:87
 msgid "visiteur du site depuis Avril 2007"
-msgstr ""
+msgstr "visitante deste site desde de Abril de 2007"
 
 #: app/templates/base.html:103 app/templates/predications-lists.html:10
 msgid "Accueil"
-msgstr ""
+msgstr "Início"
 
 #: app/templates/base.html:106 app/templates/base.html:182
 msgid "Prédications"
-msgstr ""
+msgstr "Pregações"
 
 #: app/templates/base.html:108 app/templates/base.html:184
 #: app/templates/predications-details.html:11
@@ -77,174 +77,174 @@ msgstr ""
 #: app/templates/predications-lists.html:11
 #: app/templates/predications-lists.html:22
 msgid "Prédications écrites"
-msgstr ""
+msgstr "Pregações escritas"
 
 #: app/templates/base.html:109 app/templates/base.html:185
 msgid "Prédications vidéos"
-msgstr ""
+msgstr "Pregações vídeos "
 
 #: app/templates/base.html:110 app/templates/base.html:186
 msgid "Prédications audio"
-msgstr ""
+msgstr "Pregações áudio"
 
 #: app/templates/base.html:115 app/templates/base.html:190
 msgid "Médias"
-msgstr ""
+msgstr "Média"
 
 #: app/templates/base.html:117 app/templates/base.html:192
 msgid "Presse écrite"
-msgstr ""
+msgstr "Prensa escrita"
 
 #: app/templates/base.html:118 app/templates/base.html:193
 msgid "Emissions radio"
-msgstr ""
+msgstr "Rádio Programas"
 
 #: app/templates/base.html:119 app/templates/base.html:194
 msgid "Emissions TV"
-msgstr ""
+msgstr "TV Programas"
 
 #: app/templates/base.html:120 app/templates/base.html:195
 msgid "Autres vidéos"
-msgstr ""
+msgstr "Outros vídeos"
 
 #: app/templates/base.html:124
 msgid "Galérie Photos"
-msgstr ""
+msgstr "Fotografias"
 
 #: app/templates/base.html:128 app/templates/base.html:199
 msgid "Ressources"
-msgstr ""
+msgstr "Recursos"
 
 #: app/templates/base.html:130 app/templates/base.html:201
 msgid "Témoignages"
-msgstr ""
+msgstr "Testemunhos"
 
 #: app/templates/base.html:131 app/templates/base.html:202
 msgid "Actualités"
-msgstr ""
+msgstr "Notícias"
 
 #: app/templates/base.html:132
 msgid "Les pépites d'or"
-msgstr ""
+msgstr "As pepitas de oro"
 
 #: app/templates/base.html:133 app/templates/base.html:203
 msgid "Aide pour la lecture"
-msgstr ""
+msgstr "Assistência para leitura"
 
 #: app/templates/base.html:134 app/templates/base.html:204
 msgid "Logiciels importants"
-msgstr ""
+msgstr "Softwares importantes"
 
 #: app/templates/base.html:138
 msgid "Adorations"
-msgstr ""
+msgstr "Adoração"
 
 #: app/templates/base.html:140
 msgid "Louanges"
-msgstr ""
+msgstr "Louvor"
 
 #: app/templates/base.html:141
 msgid "Mélodies"
-msgstr ""
+msgstr "Melodias"
 
 #: app/templates/base.html:145
 msgid "Le Cri de minuit dans le monde"
-msgstr ""
+msgstr "O Clamor da meia-noite no mundo"
 
 #: app/templates/base.html:151
 msgid "Contacts"
-msgstr ""
+msgstr "Contactos"
 
 #: app/templates/base.html:208
 msgid "Newsletter"
-msgstr ""
+msgstr "Boletim informativo"
 
 #: app/templates/base.html:209
 msgid ""
 "Recevez dans votre boite mail les actualités et prédications du prophète"
-msgstr ""
+msgstr "Receba no seu correio as ùltimas noticias e pregação do Profeta"
 
 #: app/templates/base.html:211
 msgid "Entrez votre adresse mail"
-msgstr ""
+msgstr "Digite seu endereço de e-mail"
 
 #: app/templates/base.html:216
 msgid "Contacts du prophète"
-msgstr ""
+msgstr "Contactos do Profeta"
 
 #: app/templates/base.html:241
 msgid "Tous droits réservés"
-msgstr ""
+msgstr "Todos direitos reservados"
 
 #: app/templates/base.html:242
 msgid "Nous contacter"
-msgstr ""
+msgstr "Contacta-nos"
 
 #: app/templates/predications-details.html:5
 msgid "Bienvenue sur le site officiel du Prophète"
-msgstr ""
+msgstr "Bem-vindo ao site oficial do Profeta Kacou Philippe"
 
 #: app/templates/predications-details.html:10
 msgid "Acceuil"
-msgstr ""
+msgstr "Início"
 
 #: app/templates/predications-details.html:126
 msgid "Chapitres similaires"
-msgstr ""
+msgstr "Capítulos semelhantes"
 
 #: app/templates/predications-details.html:134
 msgid "Télécharger le fichier PDF"
-msgstr ""
+msgstr "Baixar o arquivo PDF"
 
 #: app/templates/predications-details.html:140
 msgid "Télécharger le fichier Audio"
-msgstr ""
+msgstr "Baixar o arquivo de áudio"
 
 #: app/templates/predications-details.html:148
 #: app/templates/predications-lists.html:79
 msgid "Ecouter"
-msgstr ""
+msgstr "Ouvir"
 
 #: app/templates/predications-details.html:212
 #: app/templates/predications-lists.html:80
 msgid "Partagez ce chapitre"
-msgstr ""
+msgstr "Partilhar este capítulo"
 
 #: app/templates/predications-lists.html:26
 msgid "Aide pour la lecture dans la recherche des sermons"
-msgstr ""
+msgstr "Para te ajudar a ler as pregações"
 
 #: app/templates/predications-lists.html:40
 msgid "Rechercher une prédication"
-msgstr ""
+msgstr "Buscar uma pregação"
 
 #: app/templates/predications-lists.html:43
 msgid "Entrez un mot-clé"
-msgstr ""
+msgstr "Introduza uma palavra chave"
 
 #: app/templates/predications-lists.html:56
 #: app/templates/predications-lists.html:173
 msgid "Préc"
-msgstr ""
+msgstr "Ant"
 
 #: app/templates/predications-lists.html:66
 #: app/templates/predications-lists.html:183
 msgid "Suiv"
-msgstr ""
+msgstr "Seg"
 
 #: app/templates/predications-lists.html:68
 #: app/templates/predications-lists.html:185
 msgid "Dernier"
-msgstr ""
+msgstr "O último"
 
 #: app/templates/predications-lists.html:76
 msgid "Chapitre"
-msgstr ""
+msgstr "Capitulo"
 
 #: app/templates/predications-lists.html:77
 msgid "Titre"
-msgstr ""
+msgstr "Titulo"
 
 #: app/templates/predications-lists.html:78
 msgid "Télécharger"
-msgstr ""
+msgstr "Carregue"

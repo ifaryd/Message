@@ -11,7 +11,6 @@ class Actualite(models.Model):
         managed = False
         db_table = 'actualite'
 
-
 class Langue(models.Model):
     field_id = models.AutoField(db_column='_id', primary_key=True)  # Field renamed because it started with '_'.
     initial = models.TextField()

@@ -30,31 +30,26 @@ def result(request, lang):
     else:
         versets = models.Verset.objects.filter(id_langue__initial = lang)
     
-
     paginator = Paginator(versets, 50)
     try:
         page = int(request.GET.get('page', '1'))
     except:
-        page = 1     
+        page = 1
     try:
         versets = paginator.page(page)
     except(EmptyPage, InvalidPage):
         versets = paginator.page(paginator.num_pages)
 
-    
     paginator = Paginator(predications, 1)
     try:
         page = int(request.GET.get('page', '1'))
     except:
-        page = 1     
+        page = 1
     try:
         predications = paginator.page(page)
     except(EmptyPage, InvalidPage):
         predications = paginator.page(predications.num_pages)
-
-
     return render(request, 'result.html', locals())
-
 
 
 def contact(request, lang):
@@ -90,11 +85,20 @@ def predications_detail(request, lang, predid):
     currentpage = "predication/"+ str(predid)
     predications = models.Predication.objects.get(pk =int(predid))
     versets =  models.Verset.objects.filter(id_pred = predications)
-    pred_next = str(int(predid) +1 ) 
+    pred_next = str(int(predid) +1)
     pred_nexto = models.Predication.objects.get(pk = pred_next)
-    pred_prev = str(int(predid) -1 )
+    pred_prev = str(int(predid) -1)
     pred_prevo = models.Predication.objects.get(pk = pred_prev)
     return render(request, 'predications-details.html', locals())
+
+
+
+
+
+
+
+
+
 
 
 
