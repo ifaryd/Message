@@ -89,6 +89,8 @@ def predications_detail(request, lang, predid):
     pred_nexto = models.Predication.objects.get(pk = pred_next)
     pred_prev = str(int(predid) -1)
     pred_prevo = models.Predication.objects.get(pk = pred_prev)
+    # pred = str(int(predid))
+    # pred_lien = models.Predication.objects.get(pk = pred)
     return render(request, 'predications-details.html', locals())
 
 

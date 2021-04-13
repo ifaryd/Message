@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% load static %}
 
 {% block title %}
 {{ predications.titre }}
@@ -26,13 +27,13 @@
             <h1 class="entry-title title pull-left pred-title">
                 <span class="chapter-name">{{ predications.nom_pred }}</span> : <span class="chapter-title">{{ predications.titre }}</span>
             </h1>
-            <div class="actions pull-right small">
+            <div class="actions pull-right small" id="esc">
                 <ul class="clearfix">
                     <li>
                         
                                                 
-                        <div class="buttons">
-							<a href="https://www.philippekacou.org/file/download?id=1&amp;type=mp3&amp;cat=predication" title="Télécharger">
+                        <div class="buttons" >
+							<a href="" title="Télécharger">
 								MP3
 							</a>
 						</div>
@@ -112,10 +113,10 @@
                 </ul>
             </div>
         </header>
-        <footer class="entry-details text-muted">
+        <footer class="entry-details text-muted le">
             <p>{{ predications.sous_titre }}</p>
         </footer>
-        <div class="entry-content" >
+        <div class="entry-content just" >
 
 			<div class="entry-body">
 				{% for verset in versets %}
@@ -126,13 +127,13 @@
 				<p><strong><em>{%  trans 'Chapitres similaires' %}&nbsp;:&nbsp;</em></strong><strong><em>Kc.36, Kc.64, Kc.130, Kc.131 et Kc.133</em></strong></p><p>&nbsp;</p>
 			</div>  
         </div>
-        <div class="actions">
+        <div class="actions" id="esc1">
 
         	<ul class="actions-list">
 				<!-- <button class="btn btn-primary" id="download"> download pdf</button> -->
         		<li>
                     <p class="action-label" >{%  trans 'Télécharger le fichier PDF' %}</p>
-        			<a href="" title="Télécharger">
+        			<a href="" title="Télécharger"  onclick="printForm()">
         				Version PDF
         			</a>
         		</li>
@@ -211,14 +212,14 @@
         		<li>
         			<p class="action-label">{%  trans 'Partagez ce chapitre' %}</p>
         			<div class="buttons">
-        				<a href="//facebook.com/sharer/sharer.php?url=https%3A%2F%2Fwww.philippekacou.org%2Ffr%2Fpredications%2Fpredications-ecrites%3FNumPred%3D1" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/facebook_square_32.png" title="Suivez nous sur facebook"></a>
-                        <a href="//twitter.com/sharer?url=https%3A%2F%2Fwww.philippekacou.org%2Ffr%2Fpredications%2Fpredications-ecrites%3FNumPred%3D1" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/twitter_square_32.png" title="Partagez sur Twitter"></a>
-                        <a href="//plus.google.com/share?url=https%3A%2F%2Fwww.philippekacou.org%2Ffr%2Fpredications%2Fpredications-ecrites%3FNumPred%3D1" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/google_plus_square_32.png" title="Partagez sur G+"></a>
+        				<a href="" title="Suivez nous sur facebook"></a>
+                        <a href="" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/twitter_square_32.png" title="Partagez sur Twitter"></a>
+                        <a href="" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/google_plus_square_32.png" title="Partagez sur G+"></a>
         			</div>
         		</li>
         	</ul>
         </div>
-			<aside class="entry-related-links">
+			<aside class="entry-related-links" id="esc2">
 				<nav class="small">
                     <ul class="clearfix list-unstyled">
                         <li class="pull-left">
@@ -239,6 +240,25 @@
 
 </div>
 
+<button type="button" onclick="printForm()">
+    Print Form
+ </button>
+
+
+
+<script>
+function printForm() {
+	printJS({
+        printable: 'invoice',
+		type: 'html',
+		style: ".pred-title {text-align: center !important;} .le {text-align: center;} .just {text-align: justify;}",
+		ignoreElements: ['esc', 'esc1', 'esc2'],
+		documentTitle: '{{ predications.nom_pred }} : {{ predications.titre }}'
+		
+		
+    })
+}
+</script>
 
 
 {% endblock content %}

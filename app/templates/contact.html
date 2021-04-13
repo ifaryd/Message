@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}
-Nous contacter
+{%  trans 'Nous contacter' %}
 {% endblock title %}
 
 {% block breadcumb %}
-<ol class="breadcrumb"><li><a href="https://www.philippekacou.org/fr">Accueil</a></li>
-    <li class="active"><span>Nous contacter</span></li>
+<ol class="breadcrumb"><li><a href="https://www.philippekacou.org/fr">{%  trans 'Accueil' %}</a></li>
+    <li class="active"><span>{%  trans 'Nous contacter' %}</span></li>
     </ol>
 {% endblock breadcumb %}
 
@@ -17,15 +18,15 @@ Nous contacter
 {% block content %}
 <div class="grid_9">
 <section class="page-section contact">
-    <h1 class="page-header">Nous contacter</h1>
+    <h1 class="page-header">{%  trans 'Nous contacter' %}</h1>
  <p class="text-justify text-intro alert alert-info">
    <!-- <strong>Information importante:</strong> Compte tenu de l'extension du Message dans le monde entier, desormais vous pouvez appeler le Prophète à tout moment et à partir de n'importe quel numéro de téléphone même d'une cabine, d'un bureau,... !<br /> Veuillez informer ceux qui ne le savent pas!-->
     </p> 
  <section class="page-subsection">
-     <h1 class="title2 font-20">Contacts du prophète</h1>
+     <h1 class="title2 font-20">{%  trans 'Contacts du prophète' %}</h1>
      <div class="subsection-content">
           <dl>
-             <dt>Téléphone Mobile</dt>
+             <dt>{%  trans 'Téléphone Mobile' %}</dt>
              <dd>(+225) 08000789 (Apôtre Aman Martin)</dd>
              <dd>(+225) 74747430 (Apôtre Aman Martin)</dd>
              <dt>Email</dt>
@@ -37,44 +38,44 @@ Nous contacter
 
          </dl>
          <p class="text-justify">
-            Vous pouvez aussi envoyer un message au Prophète Kacou Philippe via facebook et il le recevra directement sur son téléphone mobile comme un sms. Compte facebook: <a href="https://www.facebook.com/kacou.philippe" class="font-bold"><span class="fa fa-facebook-square"></span> prophete.kacou</a> 
+            {%  trans 'Vous pouvez aussi envoyer un message au Prophète Kacou Philippe via facebook et il le recevra directement sur son téléphone mobile comme un sms. Compte facebook:' %} <a href="https://www.facebook.com/kacou.philippe" class="font-bold"><span class="fa fa-facebook-square"></span> prophete.kacou</a> 
           </p>
      </div>
  </section>
  <section class="page-subsection">
-     <h1 class="title2 font-20">Envoyer un mail au prophète</h1>
+     <h1 class="title2 font-20">{%  trans 'Envoyer un mail au prophète' %}</h1>
      
                  <div class="subsection-content">
-           <p>Vous pouvez utiliser aussi ce formulaire pour envoyer un message au prophète</p>
+           <p>{%  trans 'Vous pouvez utiliser aussi ce formulaire pour envoyer un message au prophète' %}</p>
          <form method="post" class="contact-form" data-parsley-validate="">
              <div class="clearfix">
                  <div class="grid_3 alpha">
                      <div class="form-line">
-                         <label for="name">Nom</label>
+                         <label for="name">{%  trans 'Nom' %}</label>
                          <input type="text" name="name" id="name" value="" required="">
                      </div>
                      <div class="form-line">
-                         <label for="surname">Prénoms</label>
+                         <label for="surname">{%  trans 'Prénoms' %}</label>
                          <input type="text" name="surname" id="surname" value="" required="">
                      </div>
                      <div class="form-line">
-                         <label for="email">Email</label>
+                         <label for="email">{%  trans 'Email' %}</label>
                          <input type="email" name="email" id="email" value="" required="">
                      </div>
                  </div>
                  <div class="grid_6 omega">
                     <div class="form-line">
-                         <label for="subject">Sujet</label>
+                         <label for="subject">{%  trans 'Sujet' %}</label>
                          <input type="text" name="subject" id="subject" value="" required="">
                     </div>
                      <div class="form-line">
-                         <label for="message">Votre Message</label>
+                         <label for="message">{%  trans 'Votre Message' %}</label>
                          <textarea name="message" id="message" rows="8" required=""></textarea>
                     </div>
                  </div>
              </div>
              <div class="form-submit">
-                 <button>Envoyer le message</button>
+                 <button>{%  trans 'Envoyer le message' %}</button>
              </div>
          </form>
      </div>
@@ -90,7 +91,7 @@ Nous contacter
 			
 <div class="block block-photo">
     <div class="block-heading bg-brown-light">
-        <h3 class="block-title text-center"><a href="http://plus.wikimonde.com/wiki/Kacou_Philippe">Qui est Kacou Philippe ?</a></h3>
+        <h3 class="block-title text-center"><a href="http://plus.wikimonde.com/wiki/Kacou_Philippe">{%  trans 'Qui est Kacou Philippe ?' %}</a></h3>
     </div>
     <div class="block-content">
         <img src="https://www.philippekacou.org/medias/Proph_Kacou.jpg" alt="Photo Kacou Philippe">
@@ -121,7 +122,7 @@ Nous contacter
 			
 <div class="block block-socials bordered padding bordered-gray">
     <div class="block-heading">
-        <h3 class="block-title text-muted">Réseaux sociaux</h3>
+        <h3 class="block-title text-muted">{%  trans 'Réseaux sociaux' %}</h3>
     </div>
     <div class="block-content">
         <ul class="list-inline text-center">
@@ -138,7 +139,7 @@ Nous contacter
     data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
         <div class="fb-xfbml-parse-ignore">
             <blockquote cite="https://www.facebook.com/kacou.philippe">
-                <a href="https://www.facebook.com/kacou.philippe">Prophète Philippe Kacou</a>
+                <a href="https://www.facebook.com/kacou.philippe">{%  trans 'Prophète Philippe Kacou' %}</a>
             </blockquote>
         </div>
     </div>

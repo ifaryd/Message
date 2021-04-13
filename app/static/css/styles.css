@@ -4,9 +4,16 @@
 
 *Pagination
 **/
+@media print,screen {
+
+  .Header {
+       display: none;
+      }
+  }
 
 .highlight{
   background-color: #fcf8e3;
+  
 }
 
 .cd-pagination {
