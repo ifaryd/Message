@@ -133,7 +133,7 @@
 				<!-- <button class="btn btn-primary" id="download"> download pdf</button> -->
         		<li>
                     <p class="action-label" >{%  trans 'Télécharger le fichier PDF' %}</p>
-        			<a href="" title="Télécharger"  onclick="printForm()">
+        			<a type="button" title="Télécharger"  onclick="document.title = '{{ predications.nom_pred }} : {{ predications.titre }}';printForm()">
         				Version PDF
         			</a>
         		</li>
@@ -212,7 +212,7 @@
         		<li>
         			<p class="action-label">{%  trans 'Partagez ce chapitre' %}</p>
         			<div class="buttons">
-        				<a href="" title="Suivez nous sur facebook"></a>
+        				<a href="" title="Suivez nous sur facebook"><img src="https://www.philippekacou.org/assets/front/images/facebook_square_32.png" title="Suivez nous sur facebook"></a>
                         <a href="" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/twitter_square_32.png" title="Partagez sur Twitter"></a>
                         <a href="" target="_blank"><img src="https://www.philippekacou.org/assets/front/images/google_plus_square_32.png" title="Partagez sur G+"></a>
         			</div>
@@ -240,9 +240,9 @@
 
 </div>
 
-<button type="button" onclick="printForm()">
+<!-- <button type="button" onclick="printForm()">
     Print Form
- </button>
+ </button> -->
 
 
 

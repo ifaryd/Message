@@ -25,7 +25,7 @@
     <h1 class="page-header">{%  trans 'Résultats de la recherche' %}</h1>
     <div class="page-content">
         <aside>
-            <p class="text-muted"><strong>{{ versets.paginator.count }}</strong> prédication(s) trouvée(s) avec le mot clé <strong>{{ search_query }} </strong></p>
+            <p class="text-muted"><strong>{{ versets.paginator.count }}</strong> prédication(s) trouvée(s) avec le mot clé <strong>{{ search_query }}</strong></p>
         </aside>
 
 
@@ -35,7 +35,7 @@
                     <label for="keyword">{%  trans 'Rechercher une prédication' %}</label>
                 </div>
                 <div class="input-box grid_4 omega">
-                    <input type="search" name="search" placeholder="Entrez un mot-clé" autocomplete="off" required="">
+                    <input type="search" name="search" placeholder="{% trans 'Entrez un mot-clé' %}" autocomplete="off" required="">
                     <div class="results-wrapper"></div>
                 </div>
                 <div class="grid_2 alpha omega">
@@ -71,7 +71,7 @@
             <h4 class="result-header"><a href="">{{ verset.id_pred }}</a></h4>
             <div class="result-content">
                 <p class="">{{ verset.contenu|highlight:search_query|truncatewords:100 }}</p>
-                <a href="">{%  trans 'Lire suite' %} {{ verset.id_pred }}</a>
+                <a href="predication/{{ predications.numero }}">{%  trans 'Lire suite' %}</a>
             </div>
             </li>   
             {% endfor %} 
