@@ -22,10 +22,10 @@
 {% block content %}
 <div class="grid_12">
 <section class="page-section predications-ecrites">
-    <h1 class="page-header">{%  trans 'Résultats de la recherche' %}</h1>
+    <h1 class="page-header">{%  trans 'Résultats de la recherche' %}</h1> 
     <div class="page-content">
         <aside>
-            <p class="text-muted"><strong>{{ versets.paginator.count }}</strong> prédication(s) trouvée(s) avec le mot clé <strong>{{ search_query }}</strong></p>
+            <p class="text-muted"><strong>{{ versets.paginator.count }}</strong> {% trans 'prédication(s) trouvée(s) avec le mot clé' %} <strong>{{ search_query }}</strong></p>
         </aside>
 
 
