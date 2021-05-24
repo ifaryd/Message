@@ -26,7 +26,7 @@ SECRET_KEY = 'te*1xfz7la+-y3_52ztpfvlde5#8zghu(z=$7x-ojr($@n-*6o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','philippekacou.org','wwww.philippekacou.org','aec15b0005bc.ngrok.io']
+ALLOWED_HOSTS = ['127.0.0.1','philippekacou.org','wwww.philippekacou.org','a0695ffe5f4f.ngrok.io']
 
 
 # Application definition

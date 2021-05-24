@@ -4,6 +4,7 @@
 
 *Pagination
 **/
+
 @media print,screen {
 
   .Header {
@@ -30,6 +31,9 @@
   /* hide numbers on small devices */
   /*display: none;
   margin: 0 .2em;*/
+}
+nav.hamb{
+  display: none !important;
 }
 .cd-pagination li.button {
   /* make sure prev next buttons are visible */
@@ -89,7 +93,7 @@
   color: #fff;
   pointer-events: none;
 }
-/*@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .cd-pagination li {
     display: inline-block;
   }
