@@ -148,6 +148,9 @@ body {
         //background-color: #fff;
     }*/
 }
+nav.ber{
+  display: none !important;
+}
 .btn {
   border-radius: 0;
 }

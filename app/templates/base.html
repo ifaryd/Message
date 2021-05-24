@@ -64,10 +64,76 @@
     <div id="page" class="page container_12">
         <header class="site-header" role="banner">
             <div class="header-top clearfix">
+                
                 <div class="logo-wrapper grid_2 logo">
                     <a href="/{{ lang }}" class="logo">
                         <img class="logo" src="{% static 'images/logo-pkacou.png' %}"  alt="Logo" title="Aller à la page d'accueil" class="img_responsive" />
                     </a>
+                </div>
+                <div>
+                    <nav role="navigation" class="">
+                        <div id="menuToggle">
+                          <input type="checkbox" />
+                          
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          
+                          <ul id="menu">
+                            <li class="current">
+                                <a href="/{{ lang }} ">{% trans 'Accueil' %}</a>
+                            </li>
+                            <li>
+                                <a href="#">{% trans 'Prédications' %}</a>
+                                <ul class="dropdown">
+                                    <li><a href="{% url 'predications' lang %}">{% trans 'Prédications écrites' %}</a></li>
+                                    <li><a href="videos">{% trans 'Prédications vidéos' %}</a></li>
+                                    <li><a href="audio">{% trans 'Prédications audio' %}</a></li>
+                                </ul>
+                            </li>
+                    
+                            <li>
+                                <a href="#">{% trans 'Médias' %}</a>
+                                <ul class="dropdown">
+                                    <li><a href="ecrite">{% trans 'Presse écrite' %}</a></li>
+                                    <li><a href="radio">{% trans 'Emissions radio' %}</a></li>
+                                    <li><a href="emissions-tv">{% trans 'Emissions TV' %}</a></li>
+                                    <li class="hide"><a href="autres-videos">{% trans 'Autres vidéos' %}</a></li>
+                                </ul>
+                            </li>
+                             <li>
+                                <a href="galerie">{% trans 'Galérie Photos' %}</a>
+                    
+                            </li>
+                            <li>
+                                <a href="#">{% trans 'Ressources' %}</a>
+                                <ul class="dropdown">
+                                    <li><a href="temoignages">{% trans 'Témoignages' %}</a></li>
+                                    <li><a href="actualites">{% trans 'Actualités' %}</a></li>
+                                    <li><a href="https://www.evernote.com/pub/eclipse29/INTERNET-FRANCAIS">{% trans "Les pépites d'or" %}</a></li>
+                                    <li><a href="aide">{% trans 'Aide pour la lecture' %}</a></li>
+                                    <li><a href="logiciel">{% trans 'Logiciels importants' %}</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">{% trans 'Adorations' %}</a>
+                                <ul class="dropdown">
+                                    <li><a href="louanges">{% trans 'Louanges' %}</a></li>
+                                    <li><a href="melodies">{% trans 'Mélodies' %}</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://www.philippekacou.org#">{% trans 'Le Cri de minuit dans le monde' %}</a>
+                            </li>
+                            <!-- <li>
+                                <a href="https://www.philippekacou.org/fr/traduction-audio">Traduction</a>
+                            </li> -->
+                            <li class="last">
+                                <a href="{% url 'contact' lang %}" class="{% active_link 'contact' 'active' %}">{% trans 'Contacts' %}</a>
+                            </li>
+                          </ul>
+                        </div>
+                    </nav>
                 </div>
                 <div class="grid_7 text-center alpha"> 
                     <ul class="languages-list list-inline drap">
@@ -88,11 +154,11 @@
                     </div>
                 </div>
                 <div class="grid_3 last-block">
-                     <div class="text-right text-muted small">
+                     <div class="text-right text-muted small hid">
                         {% trans 'Vous êtes le' %} <span class="counter-digit bg-brown text-bold">7 975 190</span> <sup>{% trans 'ème' %} </sup> {% trans 'visiteur du site depuis Avril 2007' %}
                         
                     </div>
-                    <div class="download download-fr">
+                    <div class="download download-fr hid">
                         <a href="https://play.google.com/store/apps/details?id=com.matth25.prophetekacou">
                             
                             <img src="/static/images/Ban_GPlay_{{ lang }}.png"  alt="Application Android" class="img-responsive" />
@@ -102,69 +168,8 @@
             </div> 
     
 
-            <nav role="navigation" class="hamb">
-                <div id="menuToggle">
-                  <input type="checkbox" />
-                  
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  
-                  <ul id="menu">
-                    <li class="current">
-                        <a href="/{{ lang }} ">{% trans 'Accueil' %}</a>
-                    </li>
-                    <li>
-                        <a href="#">{% trans 'Prédications' %}</a>
-                        <ul class="dropdown">
-                            <li><a href="{% url 'predications' lang %}">{% trans 'Prédications écrites' %}</a></li>
-                            <li><a href="videos">{% trans 'Prédications vidéos' %}</a></li>
-                            <li><a href="audio">{% trans 'Prédications audio' %}</a></li>
-                        </ul>
-                    </li>
             
-                    <li>
-                        <a href="#">{% trans 'Médias' %}</a>
-                        <ul class="dropdown">
-                            <li><a href="ecrite">{% trans 'Presse écrite' %}</a></li>
-                            <li><a href="radio">{% trans 'Emissions radio' %}</a></li>
-                            <li><a href="emissions-tv">{% trans 'Emissions TV' %}</a></li>
-                            <li class="hide"><a href="autres-videos">{% trans 'Autres vidéos' %}</a></li>
-                        </ul>
-                    </li>
-                     <li>
-                        <a href="galerie">{% trans 'Galérie Photos' %}</a>
-            
-                    </li>
-                    <li>
-                        <a href="#">{% trans 'Ressources' %}</a>
-                        <ul class="dropdown">
-                            <li><a href="temoignages">{% trans 'Témoignages' %}</a></li>
-                            <li><a href="actualites">{% trans 'Actualités' %}</a></li>
-                            <li><a href="https://www.evernote.com/pub/eclipse29/INTERNET-FRANCAIS">{% trans "Les pépites d'or" %}</a></li>
-                            <li><a href="aide">{% trans 'Aide pour la lecture' %}</a></li>
-                            <li><a href="logiciel">{% trans 'Logiciels importants' %}</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">{% trans 'Adorations' %}</a>
-                        <ul class="dropdown">
-                            <li><a href="louanges">{% trans 'Louanges' %}</a></li>
-                            <li><a href="melodies">{% trans 'Mélodies' %}</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://www.philippekacou.org#">{% trans 'Le Cri de minuit dans le monde' %}</a>
-                    </li>
-                    <!-- <li>
-                        <a href="https://www.philippekacou.org/fr/traduction-audio">Traduction</a>
-                    </li> -->
-                    <li class="last">
-                        <a href="{% url 'contact' lang %}" class="{% active_link 'contact' 'active' %}">{% trans 'Contacts' %}</a>
-                    </li>
-                  </ul>
-                </div>
-            </nav>
+                   
     <nav class="site-navigation clearfix" role="navigation">   
     <ul class="sf-menu list-unstyled" id="main-menu">
         <li class="current">
@@ -354,5 +359,3 @@
     </script>
 </body>
 </html>
-
-
