@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-30 23:56+0000\n"
+"POT-Creation-Date: 2022-03-31 08:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -155,8 +155,6 @@ msgid "Matth.25:6"
 msgstr "Mateus 25:6"
 
 #: app/templates/base.html:152
-#, fuzzy
-#| msgid "et d'"
 msgid " et d'"
 msgstr " e"
 
@@ -204,7 +202,19 @@ msgstr "Contacta-nos"
 
 #: app/templates/contact.html:29
 msgid "Téléphone Mobile"
-msgstr ""
+msgstr "Telemóvel"
+
+#: app/templates/contact.html:30
+msgid "(+225) 08000789 (Apôtre Aman Martin)"
+msgstr "(+244) 931993967 (Apóstolo Hugo Ze (Angola))"
+
+#: app/templates/contact.html:31
+msgid "(+225) 74747430 (Apôtre Aman Martin)"
+msgstr "(+55) 7999110-4586 (Apóstolo Andre Lima (Brazil))"
+
+#: app/templates/contact.html:34
+msgid "Adresse Postale"
+msgstr "Endereço postal"
 
 #: app/templates/contact.html:41
 msgid ""
@@ -212,55 +222,52 @@ msgid ""
 "et il le recevra directement sur son téléphone mobile comme un sms. Compte "
 "facebook:"
 msgstr ""
+"Você também pode enviar uma mensagem ao Profeta Kacou Philippe através de "
+"Facebook; ele receberá directamente no seu telemóvel em forma de um SMS. "
+"Conta Facebook:"
 
 #: app/templates/contact.html:46
-#, fuzzy
-#| msgid "Contacts du prophète"
 msgid "Envoyer un mail au prophète"
-msgstr "Contactos do Profeta"
+msgstr "Enviar um correio ao profeta"
 
 #: app/templates/contact.html:49
 msgid ""
 "Vous pouvez utiliser aussi ce formulaire pour envoyer un message au prophète"
-msgstr ""
+msgstr "Você pode utilizar esta fórmula para enviar a sua mensagem ao profeta"
 
 #: app/templates/contact.html:54
 msgid "Nom"
-msgstr ""
+msgstr "Último nome"
 
 #: app/templates/contact.html:58
 msgid "Prénoms"
-msgstr ""
+msgstr "Primeiro Nome"
 
 #: app/templates/contact.html:62
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: app/templates/contact.html:68
 msgid "Sujet"
-msgstr ""
+msgstr "Tema"
 
 #: app/templates/contact.html:72
 msgid "Votre Message"
-msgstr ""
+msgstr "Mensagem"
 
 #: app/templates/contact.html:78
 msgid "Envoyer le message"
-msgstr ""
+msgstr "Enviar"
 
 #: app/templates/contact.html:94 app/templates/index.html:324
-#, fuzzy
-#| msgid "Prophète Kacou Philippe"
 msgid "Qui est Kacou Philippe ?"
-msgstr "Profeta Kacou Philippe"
+msgstr "QUEM É KACOU PHILIPPE?"
 
 #: app/templates/contact.html:125 app/templates/index.html:355
 msgid "Réseaux sociaux"
-msgstr ""
+msgstr "REDES SOCIAIS"
 
 #: app/templates/contact.html:142 app/templates/index.html:372
-#, fuzzy
-#| msgid "Prophète Kacou Philippe"
 msgid "Prophète Philippe Kacou"
 msgstr "Profeta Kacou Philippe"
 
@@ -270,65 +277,60 @@ msgstr "Bem-vindo ao site oficial do Profeta Kacou Philippe"
 
 #: app/templates/index.html:17
 msgid "Annonces"
-msgstr ""
+msgstr "ANÚNCIOS"
 
 #: app/templates/index.html:23
 msgid ""
-"Le Prophète Kacou Philippe est sorti de prison le mardi nuit 16 Août 2016 "
-"mais interdit de voyager et de prêcher l&#8217;Évangile jusqu"
+" Le Prophète Kacou Philippe est sorti de prison le mardi nuit 16 Août 2016 "
+"mais interdit de voyager et de prêcher l&#8217;Évangile jusqu'en mai 2021."
 msgstr ""
+" O Profeta Kacou Philippe saiu da prisão na noite de terça-feira, 16 de "
+"abril de 2016, mas proibido de viajar e de pregar o Evangelho até maio de "
+"2021."
 
 #: app/templates/index.html:33
 msgid "Le Livre du Prophète Kacou"
-msgstr ""
+msgstr "O LIVRO DO PROFETA KACOU"
 
 #: app/templates/index.html:37
-#, fuzzy
-#| msgid "Prophète Kacou Philippe"
-msgid "Le Livre du Prophète Kacou Philippe"
-msgstr "Profeta Kacou Philippe"
+msgid " Le Livre du Prophète Kacou Philippe"
+msgstr " O Livro do Profeta Kacou Philippe"
 
 #: app/templates/index.html:38
-#, fuzzy
-#| msgid "Prophète Kacou Philippe"
-msgid "Le Livre du Prophète Kacou Philippe en audio"
-msgstr "Profeta Kacou Philippe"
+msgid " Le Livre du Prophète Kacou Philippe en audio"
+msgstr " O Livro do Profeta Kacou Philippe em audio"
 
 #: app/templates/index.html:46
-msgid "Le Livre en logiciels"
-msgstr ""
+msgid " Le Livre en logiciels"
+msgstr "O LIVRO EM VERSÃO SOFTWARE"
 
 #: app/templates/index.html:60
-msgid "Baptême et Interviews"
-msgstr ""
+msgid " Baptême et Interviews"
+msgstr "BATISMOS E ENTREVISTAS"
 
 #: app/templates/index.html:64
-msgid "Baptêmes et Consécration"
-msgstr ""
+msgid " Baptêmes et Consécration"
+msgstr " Batismo e Consagração"
 
 #: app/templates/index.html:65
-#, fuzzy
-#| msgid "Autres vidéos"
-msgid "Interviews Vidéo"
-msgstr "Outros vídeos"
+msgid " Interviews Vidéo"
+msgstr "Vídeos Entrevistas"
 
 #: app/templates/index.html:76
-msgid "d"
-msgstr ""
+msgid "d'actualités"
+msgstr "Notícias"
 
 #: app/templates/index.html:101
 msgid "Lire la suite"
-msgstr ""
+msgstr "Ler mais"
 
 #: app/templates/index.html:141
 msgid "Vidéos à la une"
-msgstr ""
+msgstr "VÍDEOS EN PRIMER PLANO"
 
 #: app/templates/index.html:254
-#, fuzzy
-#| msgid "Autres vidéos"
 msgid "de vidéos"
-msgstr "Outros vídeos"
+msgstr "vidéos"
 
 #: app/templates/index.html:262
 msgid "Web TV"

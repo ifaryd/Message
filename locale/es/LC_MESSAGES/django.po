@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-30 23:56+0000\n"
+"POT-Creation-Date: 2022-03-31 08:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -155,8 +155,6 @@ msgid "Matth.25:6"
 msgstr "Mateo 25:6"
 
 #: app/templates/base.html:152
-#, fuzzy
-#| msgid "et d'"
 msgid " et d'"
 msgstr " y"
 
@@ -170,7 +168,7 @@ msgstr "Usted es el"
 
 #: app/templates/base.html:158
 msgid "ème"
-msgstr " "
+msgstr "el"
 
 #: app/templates/base.html:158
 msgid "visiteur du site depuis Avril 2007"
@@ -202,11 +200,23 @@ msgstr "Reservados todos los derechos"
 #: app/templates/base.html:315 app/templates/contact.html:5
 #: app/templates/contact.html:10 app/templates/contact.html:21
 msgid "Nous contacter"
-msgstr "Contactamos"
+msgstr "Contactarnos"
 
 #: app/templates/contact.html:29
 msgid "Téléphone Mobile"
-msgstr ""
+msgstr "Móvil"
+
+#: app/templates/contact.html:30
+msgid "(+225) 08000789 (Apôtre Aman Martin)"
+msgstr "(+521) 8443268915 (Apóstol César Esparza García (México))"
+
+#: app/templates/contact.html:31
+msgid "(+225) 74747430 (Apôtre Aman Martin)"
+msgstr "(+591) 77123945 (Apóstol Daniel Rolando Nogales Zapata (Bolivia))"
+
+#: app/templates/contact.html:34
+msgid "Adresse Postale"
+msgstr "Dirección postal"
 
 #: app/templates/contact.html:41
 msgid ""
@@ -214,55 +224,52 @@ msgid ""
 "et il le recevra directement sur son téléphone mobile comme un sms. Compte "
 "facebook:"
 msgstr ""
+"Pueden también enviar un mensaje al Profeta Kacou Philippe mediante Facebook "
+"y él lo recibirá directamente en su móvil como un sms. Cuenta Facebook:"
 
 #: app/templates/contact.html:46
-#, fuzzy
-#| msgid "Contacts du prophète"
 msgid "Envoyer un mail au prophète"
-msgstr "Contactos del Profeta"
+msgstr "Enviar un mail al Profeta"
 
 #: app/templates/contact.html:49
 msgid ""
 "Vous pouvez utiliser aussi ce formulaire pour envoyer un message au prophète"
 msgstr ""
+"Pueden utilizar también un formulario para enviar un mensaje al Profeta"
 
 #: app/templates/contact.html:54
 msgid "Nom"
-msgstr ""
+msgstr "Apelido"
 
 #: app/templates/contact.html:58
 msgid "Prénoms"
-msgstr ""
+msgstr "Nombres"
 
 #: app/templates/contact.html:62
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: app/templates/contact.html:68
 msgid "Sujet"
-msgstr ""
+msgstr "Tema"
 
 #: app/templates/contact.html:72
 msgid "Votre Message"
-msgstr ""
+msgstr "Su mensage"
 
 #: app/templates/contact.html:78
 msgid "Envoyer le message"
-msgstr ""
+msgstr "ENVIAR EL MENSAJE"
 
 #: app/templates/contact.html:94 app/templates/index.html:324
-#, fuzzy
-#| msgid "Prophète Kacou Philippe"
 msgid "Qui est Kacou Philippe ?"
-msgstr "Profeta Kacou Philippe"
+msgstr "¿QUIÉN ES KACOU PHILIPPE ?"
 
 #: app/templates/contact.html:125 app/templates/index.html:355
 msgid "Réseaux sociaux"
-msgstr ""
+msgstr "REDES SOCIALES"
 
 #: app/templates/contact.html:142 app/templates/index.html:372
-#, fuzzy
-#| msgid "Prophète Kacou Philippe"
 msgid "Prophète Philippe Kacou"
 msgstr "Profeta Kacou Philippe"
 
@@ -272,69 +279,64 @@ msgstr "Bienvenido a la página oficial del Profeta"
 
 #: app/templates/index.html:17
 msgid "Annonces"
-msgstr ""
+msgstr "ANUNCIOS"
 
 #: app/templates/index.html:23
 msgid ""
-"Le Prophète Kacou Philippe est sorti de prison le mardi nuit 16 Août 2016 "
-"mais interdit de voyager et de prêcher l&#8217;Évangile jusqu"
+" Le Prophète Kacou Philippe est sorti de prison le mardi nuit 16 Août 2016 "
+"mais interdit de voyager et de prêcher l&#8217;Évangile jusqu'en mai 2021."
 msgstr ""
+" El Profeta Kacou Philippe salió de la cárcel en la noche del martes 16 de "
+"agosto 2016 pero le prohibieron que viajara y predicara el Evangelio hasta "
+"mayo de 2021."
 
 #: app/templates/index.html:33
 msgid "Le Livre du Prophète Kacou"
-msgstr ""
+msgstr "EL LIBRO DEL PROFETA KACOU"
 
 #: app/templates/index.html:37
-#, fuzzy
-#| msgid "Prophète Kacou Philippe"
-msgid "Le Livre du Prophète Kacou Philippe"
-msgstr "Profeta Kacou Philippe"
+msgid " Le Livre du Prophète Kacou Philippe"
+msgstr "El Libro del Profeta Kacou Philippe"
 
 #: app/templates/index.html:38
-#, fuzzy
-#| msgid "Prophète Kacou Philippe"
-msgid "Le Livre du Prophète Kacou Philippe en audio"
-msgstr "Profeta Kacou Philippe"
+msgid " Le Livre du Prophète Kacou Philippe en audio"
+msgstr "El Libro del Profeta Kacou Philippe en audio"
 
 #: app/templates/index.html:46
-msgid "Le Livre en logiciels"
-msgstr ""
+msgid " Le Livre en logiciels"
+msgstr "EL LIBRO EN PROGRAMAS"
 
 #: app/templates/index.html:60
-msgid "Baptême et Interviews"
-msgstr ""
+msgid " Baptême et Interviews"
+msgstr "BAUTISMO Y ENTREVISTAS"
 
 #: app/templates/index.html:64
-msgid "Baptêmes et Consécration"
-msgstr ""
+msgid " Baptêmes et Consécration"
+msgstr "Bautismos y Consagraciones"
 
 #: app/templates/index.html:65
-#, fuzzy
-#| msgid "Autres vidéos"
-msgid "Interviews Vidéo"
-msgstr "Otros vídeos "
+msgid " Interviews Vidéo"
+msgstr "Entrevistas Vídeo"
 
 #: app/templates/index.html:76
-msgid "d"
-msgstr ""
+msgid "d'actualités"
+msgstr "Actualidades"
 
 #: app/templates/index.html:101
 msgid "Lire la suite"
-msgstr ""
+msgstr "Seguir leyendo"
 
 #: app/templates/index.html:141
 msgid "Vidéos à la une"
-msgstr ""
+msgstr "VÍDEOS EN PRIMER PLANO"
 
 #: app/templates/index.html:254
-#, fuzzy
-#| msgid "Autres vidéos"
 msgid "de vidéos"
-msgstr "Otros vídeos "
+msgstr "vídeos "
 
 #: app/templates/index.html:262
 msgid "Web TV"
-msgstr ""
+msgstr "Web TV"
 
 #: app/templates/predications-details.html:11 app/templates/result.html:12
 msgid "Acceuil"

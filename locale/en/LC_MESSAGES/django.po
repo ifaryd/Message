@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-31 00:16+0000\n"
+"POT-Creation-Date: 2022-03-31 08:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -160,7 +160,7 @@ msgstr " and"
 
 #: app/templates/base.html:152
 msgid "Apoc.12:14"
-msgstr "Revelation 12:14."
+msgstr "Revelation 12:14"
 
 #: app/templates/base.html:158
 msgid "Vous êtes le"
@@ -203,6 +203,18 @@ msgstr "Contacts us"
 #: app/templates/contact.html:29
 msgid "Téléphone Mobile"
 msgstr "Mobile phone"
+
+#: app/templates/contact.html:30
+msgid "(+225) 08000789 (Apôtre Aman Martin)"
+msgstr "(+225) 0757585000 (Apostle Yanick Aka)"
+
+#: app/templates/contact.html:31
+msgid "(+225) 74747430 (Apôtre Aman Martin)"
+msgstr "(+225) 0140194714 (Apostle Yanick Aka)"
+
+#: app/templates/contact.html:34
+msgid "Adresse Postale"
+msgstr "PO Box"
 
 #: app/templates/contact.html:41
 msgid ""
@@ -255,8 +267,6 @@ msgid "Réseaux sociaux"
 msgstr "Social networks"
 
 #: app/templates/contact.html:142 app/templates/index.html:372
-#, fuzzy
-#| msgid "Prophète Kacou Philippe"
 msgid "Prophète Philippe Kacou"
 msgstr "Prophet Kacou Philippe"
 
@@ -281,7 +291,6 @@ msgid "Le Livre du Prophète Kacou"
 msgstr "The book of Prophet Kacou"
 
 #: app/templates/index.html:37
-
 msgid " Le Livre du Prophète Kacou Philippe"
 msgstr " The book of Prophet Kacou Philippe"
 
