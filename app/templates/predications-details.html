@@ -25,7 +25,7 @@
 	<article class="entry predications pred-1" id="invoice">
 		<header class="entry-header clearfix">
             <h1 class="entry-title title pull-left pred-title">
-                <span class="chapter-name">{{ predications.nom_pred }}</span> : <span class="chapter-title">{{ predications.titre }}</span>
+                <span class="chapter-name">{{ predications.chapitre }}</span> : <span class="chapter-title">{{ predications.titre }}</span>
             </h1>
             <div class="actions pull-right small" id="esc">
                 <ul class="clearfix">
@@ -114,7 +114,7 @@
             </div>
         </header>
         <footer class="entry-details text-muted le">
-            <p>{{ predications.sous_titre }}</p>
+		<p>{{ predications.sous_titre }}</p>
         </footer>
         <div class="entry-content just" >
 
@@ -124,7 +124,7 @@
 						{{ verset.contenu }}
 					</p>
 				{% endfor %}
-				<p><strong><em>{%  trans 'Chapitres similaires' %}&nbsp;:&nbsp;</em></strong><strong><em>Kc.36, Kc.64, Kc.130, Kc.131 et Kc.133</em></strong></p><p>&nbsp;</p>
+				<p><strong><em>&nbsp;&nbsp;</em></strong><strong><em>{{ predications.similar_sermon }}</em></strong></p><p>&nbsp;</p>
 			</div>  
         </div>
         <div class="actions" id="esc1">
@@ -133,7 +133,7 @@
 				<!-- <button class="btn btn-primary" id="download"> download pdf</button> -->
         		<li>
                     <p class="action-label" >{%  trans 'Télécharger le fichier PDF' %}</p>
-        			<a type="button" title="Télécharger"  onclick="document.title = '{{ predications.nom_pred }} : {{ predications.titre }}';printForm()">
+        			<a type="button" title="Télécharger"  onclick="document.title = '{{ predications.chapitre }} : {{ predications.titre }}';printForm()">
         				Version PDF
         			</a>
         		</li>
@@ -253,10 +253,10 @@ function printForm() {
 		type: 'html',
 		style: ".pred-title {text-align: center !important;} .le {text-align: center;} .just {text-align: justify;}",
 		ignoreElements: ['esc', 'esc1', 'esc2'],
-		documentTitle: '{{ predications.nom_pred }} : {{ predications.titre }}'
-		
+		documentTitle: '{{ predications.chapitre }} : {{ predications.titre }}',
 		
     })
+	
 }
 </script>
 

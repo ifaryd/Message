@@ -70,7 +70,7 @@
                         <img class="logo" src="{% static 'images/logo-pkacou.png' %}"  alt="Logo" title="Aller à la page d'accueil" class="img_responsive" />
                     </a>
                 </div>
-                <div>
+                <div class="menu-mobile">
                     <nav role="navigation" class="">
                         <div id="menuToggle">
                           <input type="checkbox" />
@@ -86,9 +86,9 @@
                             <li>
                                 <a href="#">{% trans 'Prédications' %}</a>
                                 <ul class="dropdown">
-                                    <li><a href="{% url 'predications' lang %}">{% trans 'Prédications écrites' %}</a></li>
-                                    <li><a href="videos">{% trans 'Prédications vidéos' %}</a></li>
-                                    <li><a href="audio">{% trans 'Prédications audio' %}</a></li>
+                                    <li class="dropdown-item"><a href="{% url 'predications' lang %}">{% trans 'Prédications écrites' %}</a></li>
+                                    <li class="dropdown-item"><a href="videos">{% trans 'Prédications vidéos' %}</a></li>
+                                    <li class="dropdown-item"><a href="audio">{% trans 'Prédications audio' %}</a></li>
                                 </ul>
                             </li>
                     
@@ -149,7 +149,7 @@
                          <p class="text-justify vision">
                             {% trans "Comme les prophètes de la Bible, en avril 1993, un homme qui n'avait jamais été dans une église reçoit en vision," %}
                             {% trans "la visitation d'un Ange qui le commissionne pour un Message destiné au Salut de l'humanité en accomplissement de " %}
-                            <strong>{% trans 'Matth.25:6' %}</strong>{% trans "et d'" %} <strong>{% trans 'Apoc.12:14' %}</strong>.
+                            <strong>{% trans 'Matth.25:6' %}</strong>{% trans " et d'" %} <strong>{% trans 'Apoc.12:14' %}</strong>.
                         </p>
                     </div>
                 </div>

@@ -148,6 +148,16 @@ body {
         //background-color: #fff;
     }*/
 }
+
+@media(min-width:768px){
+  div.menu-mobile{
+    display: none !important;
+  }
+
+}
+
+
+
 nav.ber{
   display: none !important;
 }

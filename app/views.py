@@ -1,3 +1,4 @@
+from socket import NI_NUMERICHOST
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from django.utils.translation import ugettext as _
@@ -15,6 +16,7 @@ def accueil(request):
 def index(request, lang):
     lang = lang
     currentpage = ""
+    predications = models.Predication.objects.filter(id_langue__initial = lang).all().order_by('-_id') [:3]
     return render(request, 'index.html', locals())
 
 
@@ -80,22 +82,32 @@ def predications_lists(request, lang):
     return render(request, 'predications-lists.html',  locals())
 
 
-def predications_detail(request, lang, predid):
+def predications_detail(request, lang, num_pred):
     lang = lang
-    currentpage = "predication/"+ str(predid)
-    predications = models.Predication.objects.get(pk =int(predid))
-    versets =  models.Verset.objects.filter(id_pred = predications)
-    pred_next = str(int(predid) +1)
-    pred_nexto = models.Predication.objects.get(pk = pred_next)
-    pred_prev = str(int(predid) -1)
-    if  int(predid) == 1:
-        print("None")
-    else:
-        pred_prevo = models.Predication.objects.get(pk = pred_prev)
-    # pred = str(int(predid))
-    # pred_lien = models.Predication.objects.get(pk = pred)
-    return render(request, 'predications-details.html', locals())
+    currentpage = "predication/"+ str(num_pred)
+    predications = models.Predication.objects.filter(numero =int(num_pred),id_langue__initial = lang).first()
+    if predications:
+        versets =  models.Verset.objects.filter(id_langue__initial = lang, num_pred__numero = int(num_pred))
+        pred_next = str(int(num_pred) +1)
+        pred_nexto = models.Predication.objects.get(pk = pred_next)
+        filter(id_langue__initial = lang)
+        pred_prev = str(int(num_pred) -1)
+        if  int(num_pred) == 1:
+            print("pas")
+        else:
+            pred_prevo = models.Predication.objects.get(pk = pred_prev)
+        # pred = str(int(predid))
+        # pred_lien = models.Predication.objects.get(pk = pred)
+        print(lang)
+        print(num_pred)
+        # print(predications)
+        print(predications.pred_verset.all())
+        # print(versets)
 
+        return render(request, 'predications-details.html', locals())
+
+    else:
+        return redirect('accueil')
 
 
 

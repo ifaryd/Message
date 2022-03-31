@@ -6,7 +6,7 @@
 {% endblock title %}
 
 {% block breadcumb %}
-<ol class="breadcrumb"><li class="active"><span>Accueil</span></li></ol>
+<ol class="breadcrumb"><li class="active"><span>{% trans 'Accueil' %}</span></li></ol>
 {% endblock breadcumb %}
 
 {% block wrapper %}
@@ -14,13 +14,13 @@
 		<div class="grid_3">
 			<div class="block block-flash">
 				<div class="block-heading">
-					<h3 class="block-title text-center">Annonces</h3>
+					<h3 class="block-title text-center">{% trans 'Annonces' %}</h3>
 					
 				</div>
 				<div class="block-content">
 					<div class="annonces-ticker">
 						<ul class="list-annonces list-unstyled">
-							<li><i class="fa fa-info-circle"></i> Le Prophète Kacou Philippe est sorti de prison le mardi nuit 16 Août 2016 mais interdit de voyager et de prêcher l&#8217;Évangile jusqu'en mai 2021.</li>
+							<li><i class="fa fa-info-circle"></i>{% trans " Le Prophète Kacou Philippe est sorti de prison le mardi nuit 16 Août 2016 mais interdit de voyager et de prêcher l&#8217;Évangile jusqu'en mai 2021." %} </li>
 							
 						</ul>
 					</div>
@@ -30,12 +30,12 @@
 		<div class="grid_3">
 			<div class="block block-books">
 				<div class="block-heading">
-					<h3 class="block-title text-center">Le Livre du Prophète Kacou</h3>
+					<h3 class="block-title text-center">{% trans 'Le Livre du Prophète Kacou' %}</h3>
 				</div>
 				<div class="block-content">
 					<ul class="list-unstyled">
-						<li><a href="https://www.philippekacou.org/fr/livre"><img src="https://www.philippekacou.org/assets/front/images/icon_pdf_24.png" /> Le Livre du Prophète Kacou Philippe</a></li><br/>
-						<li><a href="https://www.philippekacou.org/fr/predications/predications-audio"><img src="https://www.philippekacou.org/assets/front/images/icon_mp3_24.png" /> Le Livre du Prophète Kacou Philippe en audio</a></li>
+						<li><a href="https://www.philippekacou.org/fr/livre"><img src="https://www.philippekacou.org/assets/front/images/icon_pdf_24.png" />{% trans ' Le Livre du Prophète Kacou Philippe' %} </a></li><br/>
+						<li><a href="https://www.philippekacou.org/fr/predications/predications-audio"><img src="https://www.philippekacou.org/assets/front/images/icon_mp3_24.png" />{% trans ' Le Livre du Prophète Kacou Philippe en audio' %} </a></li>
 					</ul>
 				</div>
 			</div>
@@ -43,7 +43,7 @@
 		<div class="grid_3">
 			<div class="block block-software">
 				<div class="block-heading">
-					<h3 class="block-title text-center">Le Livre en logiciels</h3>
+					<h3 class="block-title text-center">{% trans ' Le Livre en logiciels' %}</h3>
 				</div>
 				<div class="block-content">
 					<ul class="list-software list-unstyled">
@@ -57,12 +57,12 @@
 		<div class="grid_3">
 			<div class="block block-bapteme">
 				<div class="block-heading">
-					<h3 class="block-title text-center">Baptême et Interviews</h3>
+					<h3 class="block-title text-center">{% trans ' Baptême et Interviews' %}</h3>
 				</div>
 				<div class="block-content">
 					<ul class="list-unstyled">
-						<li><a href=""><i class="fa fa-picture-o"></i> Baptêmes et Consécration</a></li><br/>
-						<li><a href="https://www.philippekacou.org/fr/medias/emissions-tv?idEmission=1"><i class="fa fa-video-camera"></i> Interviews Vidéo</a></li>
+						<li><a href=""><i class="fa fa-picture-o"></i>{% trans ' Baptêmes et Consécration' %} </a></li><br/>
+						<li><a href="https://www.philippekacou.org/fr/medias/emissions-tv?idEmission=1"><i class="fa fa-video-camera"></i>{% trans ' Interviews Vidéo' %} </a></li>
 					</ul>
 				</div>
 			</div>
@@ -73,10 +73,40 @@
 {% block content %}
 <div class="grid_9">
 	<section class="block block-latest-news">
-		        <h1 class="block-heading text-gray">Actualités<div class="readmore-block"><a href="https://www.philippekacou.org/fr/ressources/actualites">+ d'actualités</a></div></h1>
+		        <h1 class="block-heading text-gray">{% trans 'Actualités' %}<div class="readmore-block"><a href="https://www.philippekacou.org/fr/ressources/actualites">+ {% trans "d'actualités" %}</a></div></h1>
 		        <div class="block-content">
 					
-					
+					<ul class="posts-list list-unstyled">
+						{% for pred in predications %}
+							<li class="post-wrapper">
+		<article class="post post-354 clearfix post-type-summary">
+			<div class="post-thumb-wrapper grid_2 alpha" style="height: 140px;">
+				<div class="img-wrapper" style="position: relative; overflow: hidden;">
+					<img src="https://www.philippekacou.org/file/view?cat=news&amp;id=354" class="img-responsive post-thumbnail" alt="miniature" style="position: absolute; top: 0px; left: -598.235px; width: 1376px; height: 130px; max-width: none;">
+				</div>
+			</div>
+			<div class="post-content-wrapper grid_7 omega">
+				<header>
+					<h1 class="post-title font-18"><a href="{% url 'predication' lang pred.numero %}" class="post-link">{{ pred.chapitre }} : {{ pred.titre }}</a></h1>
+					 <p class="text-muted small">
+						<span class="fa fa-clock-o"></span> <time pubdate="2022-02-16T08:01:01">16 février 2022</time>
+					</p>
+				</header>
+				<div class="post-content">
+					{{ pred.chapitre }} : {{ pred.titre }}
+
+					{{ pred.sous_titre |truncatewords:13 }}
+				</div>
+				<div class="readmore-block small">
+					<a href="{% url 'predication' lang pred.numero %}">{% trans 'Lire la suite' %}</a>
+				</div>
+			</div>
+		</article>
+						</li>                     
+	                 
+						{% endfor %}
+						</ul>
+						
 						
 						<article class="post post-featured clearfix post-type-summary">
 							<div class="post-thumb-wrapper grid_2 alpha">
@@ -86,7 +116,7 @@
 								<h1 class="post-title font-18"><a href="http://www.edilivre.com/communaute/2015/02/27/rencontre-avec-philippe-kacou-pour-lensemble-de-son-oeuvre/#.VUiD6vn1akq" class="post-link" target="_blank"></a></h1>
 								<div class="post-content">
 									<p>
-										Présentez-nous vos ouvrages ?
+										Présentez-nous vos ouvragedgegegsegeg ?
 									</p>
 									<p>
 										Mon livre, "Le livre du prophète Kacou Philippe", est un ensemble de 124 chapitres répartis en 3 tomes. C'est une vision nouvelle du christianisme qu'il est indispensable d'avoir.[....]
@@ -99,13 +129,16 @@
 							</div>
 							
 						</article>
+
+						
+						
 					
 		            
 		        </div>
 	        
 		    </section>
 		    <section class="block block-featured-videos">
-		        <h1 class="block-heading text-brown-midlight">Vidéos à la une</h1>
+		        <h1 class="block-heading text-brown-midlight">{% trans 'Vidéos à la une' %}</h1>
 		        <div class="block-content bg-y">
 		            <ol class="featured-videos-list list-unstyled cycle-slideshow videos-slideshow" data-cycle-slides=">li" data-cycle-fx="fade"
 		                 data-cycle-timeout="30000" data-cycle-pauseOnHover="true" data-cycle-log="false">
@@ -218,7 +251,7 @@ A consommer sans aucune modération, fils du diable et âmes déjà en enfer, s&
 		                            </div>
 		                        </div>
 		                        <div class="readmore-block">
-		                            <a href="https://www.philippekacou.org/fr/medias/emissions-tv?idEmission=12">+ de vidéos</a>
+		                            <a href="https://www.philippekacou.org/fr/medias/emissions-tv?idEmission=12">+ {% trans 'de vidéos' %}</a>
 		                        </div>
 		                    </li>
 		                
@@ -226,7 +259,7 @@ A consommer sans aucune modération, fils du diable et âmes déjà en enfer, s&
 		        </div>
 		    </section>
 		    <section class="block block-web-tv">
-		        <h1 class="block-heading text-green">Web TV</h1>
+		        <h1 class="block-heading text-green">{% trans 'Web TV' %}</h1>
 		        <div class="block-content">
 		            <ul class="list-emission list-unstyled clearfix">
 		            		                <li class="emission pull-left">
@@ -288,7 +321,7 @@ A consommer sans aucune modération, fils du diable et âmes déjà en enfer, s&
 <div class="sidebar grid_3">
 <div class="block block-photo">
     <div class="block-heading bg-brown-light">
-        <h3 class="block-title text-center"><a href="http://plus.wikimonde.com/wiki/Kacou_Philippe">Qui est Kacou Philippe ?</a></h3>
+        <h3 class="block-title text-center"><a href="http://plus.wikimonde.com/wiki/Kacou_Philippe">{% trans 'Qui est Kacou Philippe ?' %}</a></h3>
     </div>
     <div class="block-content">
         <img src="https://www.philippekacou.org/medias/Proph_Kacou.jpg" alt="Photo Kacou Philippe">
@@ -319,7 +352,7 @@ A consommer sans aucune modération, fils du diable et âmes déjà en enfer, s&
 			
 <div class="block block-socials bordered padding bordered-gray">
     <div class="block-heading">
-        <h3 class="block-title text-muted">Réseaux sociaux</h3>
+        <h3 class="block-title text-muted">{% trans 'Réseaux sociaux' %}</h3>
     </div>
     <div class="block-content">
         <ul class="list-inline text-center">
@@ -336,7 +369,7 @@ A consommer sans aucune modération, fils du diable et âmes déjà en enfer, s&
     data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
         <div class="fb-xfbml-parse-ignore">
             <blockquote cite="https://www.facebook.com/kacou.philippe">
-                <a href="https://www.facebook.com/kacou.philippe">Prophète Philippe Kacou</a>
+                <a href="https://www.facebook.com/kacou.philippe">{% trans 'Prophète Philippe Kacou' %}</a>
             </blockquote>
         </div>
     </div>
