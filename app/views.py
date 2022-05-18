@@ -90,7 +90,6 @@ def predications_detail(request, lang, num_pred):
         versets =  models.Verset.objects.filter(id_langue__initial = lang, num_pred__numero = int(num_pred))
         pred_next = str(int(num_pred) +1)
         pred_nexto = models.Predication.objects.get(pk = pred_next)
-        filter(id_langue__initial = lang)
         pred_prev = str(int(num_pred) -1)
         if  int(num_pred) == 1:
             print("pas")
